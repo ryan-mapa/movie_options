@@ -5,10 +5,10 @@ doc = Nokogiri::HTML(open("http://www.imdb.com/chart/boxoffice"))
 
 chart = doc.at_css('.chart').children[5].children
 
-chart.children.each_with_index do |child, idx|
-  puts "HERER HERERE HEREREE #{idx}"
-  puts child
-end
+  # chart.children.each_with_index do |child, idx|
+  #   puts "HERER HERERE HEREREE #{idx}"
+  #   puts child
+  # end
 
 # puts chart.at_css('.ratingColumn')
 # chart.each do |movie|
@@ -19,4 +19,13 @@ end
 
 # puts chart.content
 
-# puts chart.chi
+# puts chart.at_css('.ratingColumn')
+items = []
+movies = []
+chart.children.each_with_index do |child, idx|
+  items.push(child.content.strip)
+end
+
+items.each {|item| movies.push(item) unless item.empty?}
+
+puts movies
