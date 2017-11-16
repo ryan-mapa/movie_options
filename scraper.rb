@@ -43,9 +43,9 @@ image_urls = []
 long.each do |el|
   if el.include?("titleColumn")
     links.push("http://www.imdb.com/" + el.strip.split(" ")[3][6..-2])
-  else
-    image_urls.push(el.strip)
+  else el.include?("posterColumn")
+    image_urls.push(el.strip.split(" ")[5][5..-2])
   end
 end
 
-puts links
+puts image_urls
