@@ -14,7 +14,6 @@ chart.children.each_with_index do |child, idx|
   links2.push(child)
 end
 
-
 items.each {|item| data.push(item) unless item.empty?}
 
 titles = []
@@ -31,12 +30,9 @@ data.each_with_index do |datum, idx|
   end
 end
 
-# puts data
 testy = []
 chart.children.each {|el| testy.push(el.to_s)}
-
 long = testy.select {|el| el.strip.length > 200}
-
 
 links = []
 image_urls = []
@@ -47,8 +43,6 @@ long.each do |el|
     image_urls.push(el.strip.split(" ")[5][5..-2])
   end
 end
-
-# puts image_urls
 
 (0..9).each do |idx|
   puts "#{titles[idx]}, #{gross[idx]}, #{gross[idx]}, #{links[idx]}, #{image_urls[idx]}"
