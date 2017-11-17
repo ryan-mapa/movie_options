@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Movies!</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
   </head>
   <body>
     test this stuffff
@@ -12,10 +14,12 @@
       // $.get('http://www.imdb.com/chart/boxoffice', function(response) {
       //   var followers = response.followers;
       // });
-
+      let chart = "";
       $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://www.imdb.com/chart/boxoffice') + '&callback=?', function(data){
-	       console.log(data.contents.slice(36150, 49173));
-       });
+	      chart = data.contents.slice(36150, 49173);
+        console.log(chart);
+      });
+
     </script>
   </body>
 </html>
