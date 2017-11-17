@@ -44,7 +44,9 @@ long.each do |el|
   end
 end
 
-(0..9).each do |idx|
-  puts "#{titles[idx]}, #{gross[idx]}, #{gross[idx]}, #{links[idx]}, #{image_urls[idx]}"
-  puts
-end
+# (0..9).each do |idx|
+#   puts "#{titles[idx]}, #{gross[idx]}, #{gross[idx]}, #{links[idx]}, #{image_urls[idx]}"
+#   puts
+# end
+
+puts doc

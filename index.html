@@ -2,9 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Movies!</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   </head>
   <body>
-    
+    test this stuffff
+
+    <script type="text/javascript">
+      // $.get('http://www.imdb.com/chart/boxoffice', function(response) {
+      //   var followers = response.followers;
+      // });
+
+      $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://www.imdb.com/chart/boxoffice') + '&callback=?', function(data){
+	       console.log(data.contents.slice(36150, 49173));
+       });
+    </script>
   </body>
 </html>
