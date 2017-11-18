@@ -15,19 +15,19 @@
       //   var followers = response.followers;
       // });
       // let chart = "";
-      // $.get('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://www.imdb.com/chart/boxoffice') + '&callback=?', function(data){
-	    //   chart = data.contents.slice(36150, 49173);
-      //   console.log(chart);
-      // });
-
-      var page = require('webpage').create();
-      page.open('http://example.com', function(status) {
-        console.log("Status: " + status);
-        if(status === "success") {
-          page.render('example.png');
-        }
-        phantom.exit();
+      $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://www.imdb.com/chart/boxoffice') + '&callback=?', function(data){
+	      chart = data.contents.slice(36150, 49173);
+        console.log(chart);
       });
+
+      // var page = require('webpage').create();
+      // page.open('http://example.com', function(status) {
+      //   console.log("Status: " + status);
+      //   if(status === "success") {
+      //     page.render('example.png');
+      //   }
+      //   phantom.exit();
+      // });
 
     </script>
   </body>
