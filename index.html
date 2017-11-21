@@ -31,10 +31,10 @@
         titles = rawTitles.map(title => title.slice(2,-1))
 
         rawLinks = chart.match(/href="\/title.*?"\n>/g);
+        links = rawLinks.map(link => "http://www.imdb.com/" + link.slice(6,-3))
 
 
-
-        console.log(rawLinks);
+        console.log(titles);
       });
 
 
