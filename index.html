@@ -15,11 +15,26 @@
       //   var followers = response.followers;
       // });
       let chart = "";
+      let rawTitles = []
       let titles = []
+      let rawLinks = []
+      let links = []
+      let rawImageUrls = []
+      let imageUrls = []
+      let rawGross = []
+      let gross = []
+
       $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://www.imdb.com/chart/boxoffice') + '&callback=?', function(data){
 	      chart = data.contents.slice(36150, 49173);
-        titles = chart.match(/ >.*?</g);
-        console.log(titles);
+
+        rawTitles = chart.match(/ >.*?</g);
+        titles = rawTitles.map(title => title.slice(2,-1))
+
+        rawLinks = chart.match(/href="\/title.*?"\n>/g);
+
+
+
+        console.log(rawLinks);
       });
 
 
