@@ -14,11 +14,14 @@
       // $.get('http://www.imdb.com/chart/boxoffice', function(response) {
       //   var followers = response.followers;
       // });
-      // let chart = "";
+      let chart = "";
+      let titles = []
       $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://www.imdb.com/chart/boxoffice') + '&callback=?', function(data){
 	      chart = data.contents.slice(36150, 49173);
-        console.log(chart);
+        titles = chart.match(/ >.*?</g);
+        console.log(titles);
       });
+
 
       // var page = require('webpage').create();
       // page.open('http://example.com', function(status) {
