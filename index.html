@@ -28,13 +28,18 @@
 	      chart = data.contents.slice(36150, 49173);
 
         rawTitles = chart.match(/ >.*?</g);
-        titles = rawTitles.map(title => title.slice(2,-1))
+        titles = rawTitles.map(title => title.slice(2, -1))
 
         rawLinks = chart.match(/href="\/title.*?"\n>/g);
-        links = rawLinks.map(link => "http://www.imdb.com/" + link.slice(6,-3))
+        links = rawLinks.map(link => "http://www.imdb.com/" + link.slice(6, -3))
 
+        rawImageUrls = chart.match(/img src=".*?"/g);
+        imageUrls = rawImageUrls.map(img => img.slice(9, -1));
 
-        console.log(titles);
+        rawGross = chart.match(/\$.*</g);
+        gross = rawGross.map(sale  => parseFloat(sale.slice(1, -2)));
+
+        // console.log(gross);
       });
 
 
