@@ -38,9 +38,16 @@
         sales = rawSales.map(sale  => parseFloat(sale.slice(1, -2)));
 
         console.log(sales);
+
+        (function() {
+          var width = 500, height = 500;
+          var svg = d3.select()
+            .append("svg")
+        })();
+
       });
 
     </script>
-    <script src="bubble.js"></script>
+    <!-- <script src="bubble.js"></script> -->
   </body>
 </html>
