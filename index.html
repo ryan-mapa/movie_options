@@ -21,6 +21,7 @@
       let imageUrls = []
       let rawSales = []
       let sales = []
+      let complete = []
 
       $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://www.imdb.com/chart/boxoffice') + '&callback=?', function(data){
 	      rawData = data.contents.slice(36150, 49173);
@@ -32,17 +33,30 @@
         links = rawLinks.map(link => "http://www.imdb.com/" + link.slice(6, -3))
 
         rawImageUrls = rawData.match(/img src=".*?"/g);
-        imageUrls = rawImageUrls.map(img => img.slice(9, -1));
+        imageUrls = rawImageUrls.map(img => img.slice(8, -1) + '"');
 
         rawSales = rawData.match(/\$.*</g);
         sales = rawSales.map(sale  => parseFloat(sale.slice(1, -2)));
 
-        console.log(sales);
+        complete = [titles, links, imageUrls, sales]
+
+        console.log(complete);
 
         (function() {
           var width = 500, height = 500;
+
           var svg = d3.select('#chart')
             .append("svg")
+            .attr('height', height)
+            .attr('width', width)
+            .append('g')
+            .attr("transform", "translate(0,0)")
+
+          var simulation = d3.forceSimulation()
+
+          // d3.queue()
+            // .defer(d3.)
+
         })();
 
       });
