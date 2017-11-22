@@ -13,15 +13,16 @@
 
     <script type="text/javascript">
       let rawData = "";
-      let rawTitles = []
-      let titles = []
-      let rawLinks = []
-      let links = []
-      let rawImageUrls = []
-      let imageUrls = []
-      let rawSales = []
-      let sales = []
-      let complete = []
+      let rawTitles = [];
+      let titles = [];
+      let rawLinks = [];
+      let links = [];
+      let rawImageUrls = [];
+      let imageUrls = [];
+      let rawSales = [];
+      let sales = [];
+      let complete = [];
+      let data  = [];
 
       $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://www.imdb.com/chart/boxoffice') + '&callback=?', function(data){
 	      rawData = data.contents.slice(36150, 49173);
@@ -33,14 +34,23 @@
         links = rawLinks.map(link => "http://www.imdb.com/" + link.slice(6, -3))
 
         rawImageUrls = rawData.match(/img src=".*?"/g);
-        imageUrls = rawImageUrls.map(img => img.slice(8, -1) + '"');
+        imageUrls = rawImageUrls.map(img => img.slice(9, -1));
 
         rawSales = rawData.match(/\$.*</g);
         sales = rawSales.map(sale  => parseFloat(sale.slice(1, -2)));
 
         complete = [titles, links, imageUrls, sales]
 
-        console.log(complete);
+        for (var i = 0; i < 10; i++) {
+          data[i] = {
+                    titles: `${titles[i]}`,
+                    links: `${links[i]}`,
+                    imageUrls: `${imageUrls[i]}`,
+                    sales: `${sales[i]}`
+                  }
+        }
+        
+        console.log(data);
 
         (function() {
           var width = 500, height = 500;
