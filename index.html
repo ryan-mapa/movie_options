@@ -49,25 +49,48 @@
                     sales: `${sales[i]}`
                   }
         }
-        
+
         console.log(data);
 
-        (function() {
-          var width = 500, height = 500;
-
-          var svg = d3.select('#chart')
-            .append("svg")
-            .attr('height', height)
-            .attr('width', width)
-            .append('g')
-            .attr("transform", "translate(0,0)")
+//d3 function
+        var canvas = d3.select("#chart").append("svg")
+          .attr("width", 800)
+          .attr("height", 600)
+          .append('g')
+          .attr("transform", "translate(0,0)")
 
           var simulation = d3.forceSimulation()
 
           // d3.queue()
-            // .defer(d3.)
+          //   .defer(data)
+          //   .await(ready)
 
-        })();
+          function ready (error, datapoints) {
+            var circles = svg.selectAll(".titles")
+              .data(datapoints)
+              .enter().append("circle")
+              .atter("class", "titles")
+              .attr("r", 10)
+              .attr("fill", "lightblue")
+
+          simulation.nodes(datapoints)
+
+          function ticked() {
+            circles
+              .attr("cx"), function(d) {
+                return d.x
+              }
+              .attr("cy"), function(d) {
+                return d.y
+              }
+          }
+
+          }
+
+
+
+
+
 
       });
 
