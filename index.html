@@ -127,7 +127,7 @@
           .data(dataCollection)
           .enter().append("pattern")
           .attr("class", "poster-art")
-          .attr("id", "")
+          .attr("id", d => d.rank)
           .attr("height", "100%")
           .attr("width", "100%")
           .attr("patternContentUnits", "objectBoundingBox")
@@ -135,7 +135,7 @@
           .attr("height", 1.5)
           .attr("width", 1)
           .attr("preserveAspectRatio", "none")
-          .attr("xlink:href", `${imageUrls[0]}`)
+          .attr("xlink:href", d => d.imageUrls)
 
 // simulation
         var simulation = d3.forceSimulation()
@@ -153,7 +153,7 @@
           .attr("cy", d => center.y)
           .attr("r", d => baseSize + (d.sales / 3))
           .attr("text", d => d.titles)
-          .attr("fill", "url(#test_id)") // fill content
+          .attr("fill", d => `url(#${d.rank})`) // fill content
           .on("mouseover", (d,i) => { //mouseover hoverText
             hoverText.html(
               `Name: ${d.titles}<br/>
