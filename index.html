@@ -41,13 +41,14 @@
         rawImageUrls = rawData.match(/img src=".*?"/g);
         imageUrls = rawImageUrls.map(img => img.slice(9, -1));
 
+// imageUrl test links
+
         links.forEach(link => {
           $.get(`https://cors-anywhere.herokuapp.com/${link}`, function(data) {
             testImageUrls.push(data.match(/img alt=".*?"/g));
             // console.log(typeof(data));
           });
         });
-
 
         rawSales = rawData.match(/\$.*</g);
         sales = rawSales.map(sale  => parseFloat(sale.slice(1, -2)));
@@ -90,6 +91,7 @@
           d.fx = null, d.fy = null;
           d3.select(this).classed("active", false);
         }
+
 //d3 function
           let cirlces = null;
           let baseSize = 25;
@@ -114,20 +116,6 @@
           .force("y", d3.forceY(center.y).strength(forceStrength))
           .force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 2))
           .on("tick", ticked); //KEY LINE FOR ACTIATION
-
-          // d3.queue()
-          //   .defer(d3.csv, "sales.csv")
-            // .await(ready)
-
-
-          // function ready (error, datapoints) {
-            // var circles = svg.selectAll(".titles")
-            //   .data(datapoints)
-            //   .enter().append("rect")
-            //   .attr("class", "titles")
-            //   .attr("r", 10)
-            //   .attr("fill", "lightblue");
-
 
             var circles = svg.selectAll(".circle") //circle element
               .data(dataCollection)
@@ -158,10 +146,6 @@
               .on("drag", dragged)
               .on("end", dragOver));
 
-
-            // simulation.nodes(datapoints)
-            //
-
 // node stuff
             simulation.nodes(dataCollection)
               .on('tick', ticked)
@@ -171,6 +155,16 @@
                 .attr("cx", d => d.x)
                 .attr("cy", d => d.y)
             } // end ticked
+
+            // image mapping helpers
+                  var defs = svg.append("defs");
+
+                  defs.append("pattern")
+                    .attr("id", "test_id")
+                    .attr("height", "100%")
+                    .attr("width", "100%")
+                    .attr("patternContentUnits", "objectBoundingBox")
+                    .append("image")
 
           // } // end ready
 
