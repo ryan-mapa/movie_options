@@ -74,7 +74,7 @@
           .attr("class", "hover")
           .text("hoverText");
 
-  // dragging helpers
+// dragging helpers
         function dragStart(d) {
           if (!d3.event.active) simulation.alphaTarget(0.3).restart();
           d.fx = d.x, d.fy = d.y;
@@ -117,16 +117,19 @@
           .attr("width", "100%")
           .attr("patternContentUnits", "objectBoundingBox")
           .append("image")
-          .attr("height", 1)
+          .attr("height", 1.5)
           .attr("width", 1)
           .attr("preserveAspectRatio", "none")
+          .attr("xlink:href", `${imageUrls[0]}`)
 
+// simulation
         var simulation = d3.forceSimulation()
         .force("x", d3.forceX(center.x).strength(forceStrength))
         .force("y", d3.forceY(center.y).strength(forceStrength))
         .force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 2))
         .on("tick", ticked); //KEY LINE FOR ACTIATION
 
+// draw circles
         var circles = svg.selectAll(".circle") //circle element
           .data(dataCollection)
           .enter().append("circle")
@@ -135,7 +138,7 @@
           .attr("cy", d => center.y)
           .attr("r", d => baseSize + (d.sales / 3))
           .attr("text", d => d.titles)
-          .attr("fill", "lightgreen")
+          .attr("fill", "url(#test_id)") // fill content
           .on("mouseover", (d,i) => { //mouseover hoverText
             hoverText.html(
               `Name: ${d.titles}<br/>
@@ -150,7 +153,6 @@
               .style("left",(d3.event.pageX+10)+"px");
           })
           .on("mouseout", () => hoverText.style("visibility", "hidden"))
-// DRAGGING CODE
           .call(d3.drag()
           .on("start", dragStart)
           .on("drag", dragged)
@@ -164,7 +166,7 @@
           circles
             .attr("cx", d => d.x)
             .attr("cy", d => d.y)
-        } // end ticked
+        }
 
       }); //match to getJSON
 
