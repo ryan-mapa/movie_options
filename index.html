@@ -28,8 +28,16 @@
       let testImageUrls =[];
 
       $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice', function(data) {
-	      rawData = data.slice(105296, 118153); //12857, 118153
-        console.log(data);
+
+        setTimeout(function() {
+
+
+	      // rawData = data.slice(105296, 118153); //12857, 118153 <h1 class="header"> </table>
+	      rawData = data//.match(/<h1 class="header">.*?<\/table>/g); //12857, 118153 <h1 class="header"> </table>
+        // console.log(rawData);
+        console.log(rawData);
+
+// regex for data /<h1 class="header">.*?</table>/g
 
         rawTitles = rawData.match(/ >.*?</g);
         titles = rawTitles.map(title => title.slice(2, -1))
@@ -173,7 +181,7 @@
 
 
 
-
+}, 0);
 
       }); //match to line 27 getJSON
 
