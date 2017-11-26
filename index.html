@@ -59,6 +59,7 @@
 
         for (var i = 0; i < 10; i++) {
           dataCollection[i] = {
+                    rank: `${(i+1)}`,
                     titles: `${titles[i]}`,
                     links: `${links[i]}`,
                     imageUrls: `${imageUrls[i]}`,
@@ -122,6 +123,20 @@
           .attr("preserveAspectRatio", "none")
           .attr("xlink:href", `${imageUrls[0]}`)
 
+        defs.selectAll(".poster-art")
+          .data(dataCollection)
+          .enter().append("pattern")
+          .attr("class", "poster-art")
+          .attr("id", "")
+          .attr("height", "100%")
+          .attr("width", "100%")
+          .attr("patternContentUnits", "objectBoundingBox")
+          .append("image")
+          .attr("height", 1.5)
+          .attr("width", 1)
+          .attr("preserveAspectRatio", "none")
+          .attr("xlink:href", `${imageUrls[0]}`)
+
 // simulation
         var simulation = d3.forceSimulation()
         .force("x", d3.forceX(center.x).strength(forceStrength))
@@ -143,7 +158,7 @@
             hoverText.html(
               `Name: ${d.titles}<br/>
                Gross Sales: $${d.sales}M<br/>
-               Rank: ${i + 1} (based on weekend)<br/>`
+               Rank: ${d.rank} (based on weekend)<br/>`
             );
             hoverText.style("visibility", "visible");
           })
