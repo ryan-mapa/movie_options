@@ -10,8 +10,6 @@
   <body>
     <h1>Movie Tiiiiiime!</h1>
 
-    <!-- <div id="chart"></div> -->
-
     <script type="text/javascript">
       let rawData = "";
       let rawTitles = [];
@@ -22,6 +20,8 @@
       let imageUrls = [];
       let rawSales = [];
       let sales = [];
+      let rawWeekend = [];
+      let weekend = [];
       let complete = [];
       let dataCollection  = [];
 
@@ -62,7 +62,7 @@
                   }
         }
 
-        console.log(dataCollection);
+        console.log(rawData);
 
 // helpers
         const hoverText = d3.select("body").append("div")
