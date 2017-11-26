@@ -25,6 +25,8 @@
       let complete = [];
       let dataCollection  = [];
 
+      let testImageUrls =[];
+
       $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice', function(data) {
 	      rawData = data.slice(105296, 118153); //12857
 
@@ -36,6 +38,14 @@
 
         rawImageUrls = rawData.match(/img src=".*?"/g);
         imageUrls = rawImageUrls.map(img => img.slice(9, -1));
+
+        links.forEach(link => {
+          $.get(`https://cors-anywhere.herokuapp.com/${link}`, function(data) {
+            testImageUrls.push(data);
+            console.log(typeof(data));
+          });
+        });
+
 
         rawSales = rawData.match(/\$.*</g);
         sales = rawSales.map(sale  => parseFloat(sale.slice(1, -2)));
@@ -51,7 +61,7 @@
                   }
         }
 
-        console.log(dataCollection);
+        console.log(testImageUrls);
 
 // helpers
         const hoverText = d3.select("body").append("div")
