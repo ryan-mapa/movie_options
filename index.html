@@ -81,9 +81,9 @@
               .data(dataCollection)
               .enter().append("circle")
               .attr("class", "circle")
-              .attr("cx", 100)
+              .attr("cx", d => d.sales)
               .attr("cy", d => d.sales)
-              .attr("r", d => d.sales / 4)
+              .attr("r", d => d.sales / 3)
               .attr("text", d => d.titles);
 
             // simulation.nodes(datapoints)

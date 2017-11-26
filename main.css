@@ -1,0 +1,14 @@
+
+.chart {
+  margin: 20px;
+  background-color: grey;
+}
+
+text {
+    font: 10px sans-serif;
+    color: black;
+}
+
+.circle {
+  background-color: green;
+}
