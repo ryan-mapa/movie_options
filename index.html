@@ -33,7 +33,7 @@
 
 
 	      // rawData = data.slice(105296, 118153); //12857, 118153 <h1 class="header"> </table>
-	      rawData = data//.match(/<h1 class="header">.*?<\/table>/g); //12857, 118153 <h1 class="header"> </table>
+	      rawData = data.match(/<h1 class="header">[\s\S]*?<\/table>/g); //12857, 118153 <h1 class="header"> </table>
         // console.log(rawData);
         console.log(rawData);
 
