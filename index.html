@@ -68,22 +68,24 @@
             // .await(ready)
 
 
-          function ready (error, datapoints) {
-            var circles = svg.selectAll(".titles")
-              .data(datapoints)
-              .enter().append("circle")
-              .attr("class", "titles")
-              .attr("r", 10)
-              .attr("fill", "lightblue")
+          // function ready (error, datapoints) {
+            // var circles = svg.selectAll(".titles")
+            //   .data(datapoints)
+            //   .enter().append("rect")
+            //   .attr("class", "titles")
+            //   .attr("r", 10)
+            //   .attr("fill", "lightblue")
 
-            svg.selectAll("circle")
+
+            svg.selectAll(".circle")
               .data(dataCollection)
               .enter().append("circle")
               .attr("cx", function(d) {return d.x;})
               .attr("cy", function(d) {return d.y;})
-              .attr("r", 10);
+              .attr("r", d => d.sales / 3)
+              .attr("text", d => d.titles);
 
-            simulation.nodes(datapoints)
+            // simulation.nodes(datapoints)
 
             function ticked() {
               circles
@@ -94,7 +96,7 @@
                   return d.y
                 }
             } // end ticked
-          } // end ready
+          // } // end ready
 
         // }); // end wrap function
 
