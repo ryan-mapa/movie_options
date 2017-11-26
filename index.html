@@ -51,6 +51,9 @@
         rawSales = rawData.match(/\$.*</g);
         sales = rawSales.map(sale  => parseFloat(sale.slice(1, -2)));
 
+        rawWeekend = rawData.match(/ \$.*?M/g); // $ with space in front
+        weekend = rawWeekend.map(sale  => parseFloat(sale.slice(2, -1)));
+
         complete = [titles, links, imageUrls, sales]
 
         for (var i = 0; i < 10; i++) {
@@ -58,11 +61,12 @@
                     titles: `${titles[i]}`,
                     links: `${links[i]}`,
                     imageUrls: `${imageUrls[i]}`,
-                    sales: `${sales[i]}`
+                    sales: `${sales[i]}`,
+                    weekend: `${weekend[i]}`
                   }
         }
 
-        console.log(rawData);
+        console.log(dataCollection);
 
 // helpers
         const hoverText = d3.select("body").append("div")
