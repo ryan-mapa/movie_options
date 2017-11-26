@@ -52,16 +52,41 @@
 
         console.log(dataCollection);
 
+// helpers
+        const hoverText = d3.select("body").append("div")
+          .style("visibility", "hidden")
+          .style("position", "absolute")
+          .style("padding", "10px")
+          .style("color", "white")
+          .style("z-index", "10")
+          .style("background-color", "rgba(0,0,0,0.8)")
+          .style("border-radius", "5px")
+          .style("font", "12px sans-serif")
+          .text("hoverText");
+
 //d3 function
+          let cirlces = null;
+
+          let width = 600;
+          let height = 400;
+          let forceStrength = 0.025;
+
+          let center = {x: width/2, y: height/2};
+
+
         // (function(dataCollection) {
           var svg = d3.select("body").append("svg")
             .attr("id", "chart")
-            .attr("width", 600)
-            .attr("height", 400)
+            .attr("width", width)
+            .attr("height", height)
             // .append('g')
             // .attr("transform", "translate(0,0)")
 
           var simulation = d3.forceSimulation()
+          .force("x", d3.forceX(center.x).strength(forceStrength))
+          .force("y", d3.forceY(center.y).strength(forceStrength))
+          .force("collide", d3.forceCollide((d) => radiusScale(d.value) + 1))
+          // .on("tick", ticked); //KEY LINE FOR ACTIATION
 
           // d3.queue()
           //   .defer(d3.csv, "sales.csv")
@@ -77,26 +102,42 @@
             //   .attr("fill", "lightblue");
 
 
-            svg.selectAll(".circle")
+            svg.selectAll(".circle") //circle element
               .data(dataCollection)
               .enter().append("circle")
               .attr("class", "circle")
-              .attr("cx", d => d.sales)
+              .attr("cx", d => d.sales) // positions!
               .attr("cy", d => d.sales)
               .attr("r", d => 2 + (d.sales / 3))
               .attr("text", d => d.titles)
-              .attr("fill", "lightgreen");
+              .attr("fill", "lightgreen")
+              .on("mouseover", (d,i) => { //mouseover hoverText
+                hoverText.html(
+                  `Name: ${d.titles}<br/>
+                   Gross Sales: $${d.sales}M<br/>
+                   Rank: ${i + 1}<br/>`
+                );
+                hoverText.style("visibility", "visible");
+              })
+              .on("mousemove", () => {
+                return hoverText
+                  .style("top", (d3.event.pageY+10)+"px")
+                  .style("left",(d3.event.pageX+10)+"px");
+              })
+              .on("mouseout", () => hoverText.style("visibility", "hidden"));
             // simulation.nodes(datapoints)
             //
-            // function ticked() {
-            //   circles
-            //     .attr("cx"), function(d) {
-            //       return d.x
-            //     }
-            //     .attr("cy"), function(d) {
-            //       return d.y
-            //     }
-            // } // end ticked
+
+            function ticked() {
+              circles
+                .attr("cx"), function(d) {
+                  return d.x
+                }
+                .attr("cy"), function(d) {
+                  return d.y
+                }
+            } // end ticked
+
           // } // end ready
 
         // }); // end wrap function
