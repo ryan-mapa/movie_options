@@ -24,8 +24,8 @@
       let complete = [];
       let dataCollection  = [];
 
-      $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://www.imdb.com/chart/boxoffice') + '&callback=?', function(data) {
-	      rawData = data.contents.slice(36150, 49173);
+      $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice', function(data) {
+	      rawData = data.slice(105296, 118153); //12857
 
         rawTitles = rawData.match(/ >.*?</g);
         titles = rawTitles.map(title => title.slice(2, -1))
@@ -57,9 +57,6 @@
           .attr("class", "hover")
           .text("hoverText");
 
-        const radiusScale = d3.scaleSqrt()
-          .domain([0, 10])
-          .range([10,80]);
   // dragging helpers
         function dragStart(d) {
           if (!d3.event.active) simulation.alphaTarget(0.3).restart();
@@ -97,7 +94,6 @@
           var simulation = d3.forceSimulation()
           .force("x", d3.forceX(center.x).strength(forceStrength))
           .force("y", d3.forceY(center.y).strength(forceStrength))
-          // .force("collide", d3.forceCollide((d) => radiusScale(d.value) + 1))
           .force("collide", d3.forceCollide(d => (d.sales / 3) + 15))
           .on("tick", ticked); //KEY LINE FOR ACTIATION
 
