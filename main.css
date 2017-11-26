@@ -1,15 +1,19 @@
-
 #chart {
-  /*margin: 20px;*/
   background-color: grey;
 }
-
-/*text {
-    font: 10px sans-serif;
-    color: black;
-}*/
 
 .circle {
   background-color: green;
   color: green;
+}
+
+.hover {
+  visibility: hidden;
+  position: absolute;
+  padding: 10px;
+  color: white ;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  font: 12px helvetica;
 }

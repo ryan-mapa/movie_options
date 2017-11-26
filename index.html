@@ -54,14 +54,7 @@
 
 // helpers
         const hoverText = d3.select("body").append("div")
-          .style("visibility", "hidden")
-          .style("position", "absolute")
-          .style("padding", "10px")
-          .style("color", "white")
-          .style("z-index", "10")
-          .style("background-color", "rgba(0,0,0,0.8)")
-          .style("border-radius", "5px")
-          .style("font", "12px sans-serif")
+          .attr("class", "hover")
           .text("hoverText");
 
         const radiusScale = d3.scaleSqrt()
