@@ -76,6 +76,7 @@
         }
 //d3 function
           let cirlces = null;
+          let baseSize = 25;
 
           let width = 800;
           let height = 600;
@@ -95,7 +96,7 @@
           var simulation = d3.forceSimulation()
           .force("x", d3.forceX(center.x).strength(forceStrength))
           .force("y", d3.forceY(center.y).strength(forceStrength))
-          .force("collide", d3.forceCollide(d => (d.sales / 3) + 15))
+          .force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 2))
           .on("tick", ticked); //KEY LINE FOR ACTIATION
 
           // d3.queue()
@@ -116,16 +117,16 @@
               .data(dataCollection)
               .enter().append("circle")
               .attr("class", "circle")
-              .attr("cx", d => d.sales) // positions!
-              .attr("cy", d => d.sales)
-              .attr("r", d => 10 + (d.sales / 3))
+              .attr("cx", d => center.x) // positions!
+              .attr("cy", d => center.y)
+              .attr("r", d => baseSize + (d.sales / 3))
               .attr("text", d => d.titles)
               .attr("fill", "lightgreen")
               .on("mouseover", (d,i) => { //mouseover hoverText
                 hoverText.html(
                   `Name: ${d.titles}<br/>
                    Gross Sales: $${d.sales}M<br/>
-                   Rank: ${i + 1} based on weekend<br/>`
+                   Rank: ${i + 1} (based on weekend)<br/>`
                 );
                 hoverText.style("visibility", "visible");
               })
