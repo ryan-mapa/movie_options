@@ -47,12 +47,15 @@
           $.get(`https://cors-anywhere.herokuapp.com/${link}`, function(datas) {
             testImageUrls.push(datas.match(/<div class="poster">[\s\S]*?jpg"/g));
             testLinks = testImageUrls.map(img => img.slice(100, -1));
-            // testImageUrls.push(data.match(/<div class="poster">[\s\S]*?jpg/g));
-            // console.log(typeof(data));
-            link = datas.match(/<div class="poster">[\s\S]*?jpg"/g)[0]
-                    .match(/src=.*?jpg"/g)[0];
+            newImage = datas.match(/<div class="poster">[\s\S]*?jpg"/g)[0]
+                    .match(/src=.*?jpg"/g)[0]
+                    .slice(5,-1);
+            console.log(newImage);
+            // console.log(idx);
 
-            console.log(link.slice(5,-1));
+// dynamic loading
+
+
           });
 
         });
@@ -72,11 +75,12 @@
                     links: `${links[i]}`,
                     imageUrls: `${imageUrls[i]}`,
                     sales: `${sales[i]}`,
-                    weekend: `${weekend[i]}`
+                    weekend: `${weekend[i]}`,
+                    bigImages: `${testLinks[i]}`
                   }
         }
 
-        // console.log(dataCollection);
+        console.log(dataCollection);
 
 // helpers
         const hoverText = d3.select("body").append("div")
@@ -146,6 +150,7 @@
           .data(dataCollection)
           .enter().append("circle")
           .attr("class", "circle")
+          .attr("id", d => d.rank)
           .attr("cx", d => center.x) // positions!
           .attr("cy", d => center.y)
           .attr("r", d => baseSize + (d.sales / 3))
