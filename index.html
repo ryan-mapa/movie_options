@@ -26,7 +26,8 @@
       let complete = [];
       let dataCollection  = [];
 
-      let testImageUrls =[];
+      let testImageUrls = [];
+      let testLinks = [];
 
       $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice', function(data) {
 
@@ -41,12 +42,19 @@
         rawImageUrls = rawData.match(/img src=".*?"/g);
         imageUrls = rawImageUrls.map(img => img.slice(9, -1));
 
-        // imageUrl test links
+// imageUrl test links
         links.forEach(link => {
-          $.get(`https://cors-anywhere.herokuapp.com/${link}`, function(data) {
-            testImageUrls.push(data.match(/img alt=".*?"/g));
+          $.get(`https://cors-anywhere.herokuapp.com/${link}`, function(datas) {
+            testImageUrls.push(datas.match(/<div class="poster">[\s\S]*?jpg"/g));
+            testLinks = testImageUrls.map(img => img.slice(100, -1));
+            // testImageUrls.push(data.match(/<div class="poster">[\s\S]*?jpg/g));
             // console.log(typeof(data));
+            link = datas.match(/<div class="poster">[\s\S]*?jpg"/g)[0]
+                    .match(/src=.*?jpg"/g)[0];
+
+            console.log(link.slice(5,-1));
           });
+
         });
 
         rawSales = rawData.match(/\$.*</g);
@@ -68,14 +76,14 @@
                   }
         }
 
-        console.log(dataCollection);
+        // console.log(dataCollection);
 
 // helpers
         const hoverText = d3.select("body").append("div")
           .attr("class", "hover")
           .text("hoverText");
 
-// dragging helpers
+  // dragging helpers
         function dragStart(d) {
           if (!d3.event.active) simulation.alphaTarget(0.3).restart();
           d.fx = d.x, d.fy = d.y;
@@ -111,17 +119,6 @@
 
 // image mapping helpers
         var defs = svg.append("defs");
-
-        defs.append("pattern")
-          .attr("id", "test_id")
-          .attr("height", "100%")
-          .attr("width", "100%")
-          .attr("patternContentUnits", "objectBoundingBox")
-          .append("image")
-          .attr("height", 1.5)
-          .attr("width", 1)
-          .attr("preserveAspectRatio", "none")
-          .attr("xlink:href", `${imageUrls[0]}`)
 
         defs.selectAll(".poster-art")
           .data(dataCollection)
