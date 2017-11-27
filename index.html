@@ -39,26 +39,9 @@
         rawLinks = rawData.match(/href="\/title.*?"\n>/g);
         links = rawLinks.map(link => "http://www.imdb.com/" + link.slice(6, -3))
 
-        rawImageUrls = rawData.match(/img src=".*?"/g);
-        imageUrls = rawImageUrls.map(img => img.slice(9, -1));
-
-// imageUrl test links
-        links.forEach(link => {
-          $.get(`https://cors-anywhere.herokuapp.com/${link}`, function(datas) {
-            testImageUrls.push(datas.match(/<div class="poster">[\s\S]*?jpg"/g));
-            testLinks = testImageUrls.map(img => img.slice(100, -1));
-            newImage = datas.match(/<div class="poster">[\s\S]*?jpg"/g)[0]
-                    .match(/src=.*?jpg"/g)[0]
-                    .slice(5,-1);
-            console.log(newImage);
-            // console.log(idx);
-
-// dynamic loading
-
-
-          });
-
-        });
+        // rawImageUrls = rawData.match(/img src=".*?"/g);
+        rawImageUrls = rawData.match(/img src=".*?@\._/g);
+        imageUrls = rawImageUrls.map(img => img.slice(9) + "V1_SY1000_CR0,0,674,1000_AL_.jpg");
 
         rawSales = rawData.match(/\$.*</g);
         sales = rawSales.map(sale  => parseFloat(sale.slice(1, -2)));
@@ -79,8 +62,25 @@
                     bigImages: `${testLinks[i]}`
                   }
         }
-
         console.log(dataCollection);
+
+// imageUrl test links
+        links.forEach(link => {
+          $.get(`https://cors-anywhere.herokuapp.com/${link}`, function(datas) {
+            testImageUrls.push(datas.match(/<div class="poster">[\s\S]*?jpg"/g));
+            testLinks = testImageUrls.map(img => img.slice(100, -1));
+            newImage = datas.match(/<div class="poster">[\s\S]*?jpg"/g)[0]
+                    .match(/src=.*?jpg"/g)[0]
+                    .slice(5,-1);
+            // console.log(newImage);
+// dynamic loading
+            d3.selectAll(".circle")
+          });
+        });
+
+// https://images-na.ssl-images-amazon.com/images/M/MV5BNDA4Nzc1OTg2OV5BMl5BanBnXkFtZTgwODE3ODgwNDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg
+//
+// https://images-na.ssl-images-amazon.com/images/M/MV5BNDA4Nzc1OTg2OV5BMl5BanBnXkFtZTgwODE3ODgwNDI@._V1_UX182_CR0,0,182,268_AL_.jpg
 
 // helpers
         const hoverText = d3.select("body").append("div")
