@@ -25,6 +25,8 @@
       let weekend = [];
       let complete = [];
       let dataCollection  = [];
+      let rawBigImageUrls = [];
+      let bigImageUrls = [];
 
       let testImageUrls = [];
       let testLinks = [];
@@ -39,7 +41,11 @@
         rawLinks = rawData.match(/href="\/title.*?"\n>/g);
         links = rawLinks.map(link => "http://www.imdb.com/" + link.slice(6, -3))
 
-        // rawImageUrls = rawData.match(/img src=".*?"/g);
+        //get image code
+        // rawImageUrls = rawData.match(/img src=".*?"/g); //small images
+        // imageUrls = rawImageUrls.map(img => img.slice(9, -1));
+
+        //get big images
         rawImageUrls = rawData.match(/img src=".*?@\._/g);
         imageUrls = rawImageUrls.map(img => img.slice(9) + "V1_SY1000_CR0,0,674,1000_AL_.jpg");
 
@@ -58,29 +64,25 @@
                     links: `${links[i]}`,
                     imageUrls: `${imageUrls[i]}`,
                     sales: `${sales[i]}`,
-                    weekend: `${weekend[i]}`,
-                    bigImages: `${testLinks[i]}`
+                    weekend: `${weekend[i]}`
+                    // bigImages: `${bigImageUrls[i]}`
                   }
         }
         console.log(dataCollection);
 
-// imageUrl test links
-        links.forEach(link => {
-          $.get(`https://cors-anywhere.herokuapp.com/${link}`, function(datas) {
-            testImageUrls.push(datas.match(/<div class="poster">[\s\S]*?jpg"/g));
-            testLinks = testImageUrls.map(img => img.slice(100, -1));
-            newImage = datas.match(/<div class="poster">[\s\S]*?jpg"/g)[0]
-                    .match(/src=.*?jpg"/g)[0]
-                    .slice(5,-1);
-            // console.log(newImage);
-// dynamic loading
-            d3.selectAll(".circle")
-          });
-        });
-
-// https://images-na.ssl-images-amazon.com/images/M/MV5BNDA4Nzc1OTg2OV5BMl5BanBnXkFtZTgwODE3ODgwNDI@._V1_SY1000_CR0,0,674,1000_AL_.jpg
-//
-// https://images-na.ssl-images-amazon.com/images/M/MV5BNDA4Nzc1OTg2OV5BMl5BanBnXkFtZTgwODE3ODgwNDI@._V1_UX182_CR0,0,182,268_AL_.jpg
+// // imageUrl test links
+//         links.forEach(link => {
+//           $.get(`https://cors-anywhere.herokuapp.com/${link}`, function(datas) {
+//             testImageUrls.push(datas.match(/<div class="poster">[\s\S]*?jpg"/g));
+//             testLinks = testImageUrls.map(img => img.slice(100, -1));
+//             newImage = datas.match(/<div class="poster">[\s\S]*?jpg"/g)[0]
+//                     .match(/src=.*?jpg"/g)[0]
+//                     .slice(5,-1);
+//             // console.log(newImage);
+// // dynamic loading
+//             d3.selectAll(".circle")
+//           });
+//         });
 
 // helpers
         const hoverText = d3.select("body").append("div")
@@ -155,7 +157,7 @@
           .attr("cy", d => center.y)
           .attr("r", d => baseSize + (d.sales / 3))
           .attr("text", d => d.titles)
-          .attr("fill", d => `url(#${d.rank})`) // fill content
+          .attr("fill", d => `url(#${d.rank})`) // fill content target id of rank
           .on("mouseover", (d,i) => { //mouseover hoverText
             hoverText.html(
               `Name: ${d.titles}<br/>
@@ -174,6 +176,8 @@
           .on("start", dragStart)
           .on("drag", dragged)
           .on("end", dragOver));
+
+
 
 // node stuff
         simulation.nodes(dataCollection)
