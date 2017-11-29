@@ -9,31 +9,19 @@
   </head>
   <body>
     <h1>Movie Tiiime!</h1>
-      <p>Current top 10 box office hits sized by gross sales. Hopefully this helps you pick a good movie to see in theatres.</p>
-
-      <p>Double click on a bubble to open the IMBD page for that movie.</p>
-
-      <input id="test" name="" value="">
+      <p>Current top 10 box office hits sized by gross sales. Hopefully this helps you pick a good movie to see in theatres. Double click on a bubble to open the IMBD page for that movie</p>
 
     <script type="text/javascript">
       let rawData = "";
-      let rawTitles = [];
-      let titles = [];
-      let rawLinks = [];
-      let links = [];
-      let rawImageUrls = [];
-      let imageUrls = [];
-      let rawSales = [];
-      let sales = [];
-      let rawWeekend = [];
-      let weekend = [];
-      let complete = [];
-      let dataCollection  = [];
-      let rawBigImageUrls = [];
-      let bigImageUrls = [];
+      let rawTitles = [], titles = [];
+      let rawLinks = [], links = [];
+      let rawImageUrls = [], imageUrls = [];
+      let rawSales = [], sales = [];
+      let rawWeekend = [], weekend = [];
+      let rawBigImageUrls = [], bigImageUrls = [];
+      let testImageUrls = [], testLinks = [];
 
-      let testImageUrls = [];
-      let testLinks = [];
+      let dataCollection  = [];
 
       $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice', function(data) {
 
@@ -45,11 +33,6 @@
         rawLinks = rawData.match(/href="\/title.*?"\n>/g);
         links = rawLinks.map(link => "http://www.imdb.com/" + link.slice(6, -3))
 
-        //get image code
-        // rawImageUrls = rawData.match(/img src=".*?"/g); //small images
-        // imageUrls = rawImageUrls.map(img => img.slice(9, -1));
-
-        //get big images
         rawImageUrls = rawData.match(/img src=".*?@\._/g);
         imageUrls = rawImageUrls.map(img => img.slice(9) + "V1_SY1000_CR0,0,674,1000_AL_.jpg");
 
@@ -58,8 +41,6 @@
 
         rawWeekend = rawData.match(/ \$.*?M/g); // $ with space in front
         weekend = rawWeekend.map(sale  => parseFloat(sale.slice(2, -1)));
-
-        complete = [titles, links, imageUrls, sales]
 
         for (var i = 0; i < 10; i++) {
           dataCollection[i] = {
@@ -115,7 +96,6 @@
           console.log('changify');
           console.log(this.d3.select("#1"));
         }
-
 
 //d3 function
         let cirlces = null;
