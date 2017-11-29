@@ -178,7 +178,6 @@
           .on("end", dragOver))
           .on('click', d => {
             if (d3.event.defaultPrevented) return;
-            console.log('clicked');
             window.open(d.links,'_blank');
           })
 
