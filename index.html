@@ -176,21 +176,21 @@
           .on("start", dragStart)
           .on("drag", dragged)
           .on("end", dragOver))
-          .on("click", function() {
-            // dataCollection[2].sales = 100;
-            // console.log(x`${dataCollection[2].sales}`);
-            console.log('test');
-            // svgrunner()
+          // .on("click", function() {
+          //   // dataCollection[2].sales = 100;
+          //   // console.log(x`${dataCollection[2].sales}`);
+          //   console.log('test');
+          //   // svgrunner()
+          // });
+          .on('click', d => {
+            if (d3.event.defaultPrevented) return;
+              window.open(d.links,'_blank');
+            // console.log(window.d3.selectALL('.circle'));
+            // changer(d.rank)
+            // console.log(d.rank);
+            // d3.select(this).attr('fill', 'green')
+            // this.attr('fill', 'green');
           });
-          // .on('click', d => {
-          //   if (d3.event.defaultPrevented) return;
-          //   // window.open(d.links,'_blank');
-          //   // console.log(window.d3.selectALL('.circle'));
-          //   // changer(d.rank)
-          //   console.log(d.rank);
-          //   // d3.select(this).attr('fill', 'green')
-          //   // this.attr('fill', 'green');
-          // })
 
 // node stuff
         simulation.nodes(dataCollection)
