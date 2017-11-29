@@ -4,6 +4,8 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: black;
+  font-family: helvetica;
+  background-image: url('background.jpg');
 }
 
 h1 {
