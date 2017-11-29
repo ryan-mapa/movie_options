@@ -175,7 +175,12 @@
           .call(d3.drag()
           .on("start", dragStart)
           .on("drag", dragged)
-          .on("end", dragOver));
+          .on("end", dragOver))
+          .on('click', d => {
+            if (d3.event.defaultPrevented) return;
+            console.log('clicked');
+            window.open(d.links,'_blank');
+          })
 
 // node stuff
         simulation.nodes(dataCollection)
