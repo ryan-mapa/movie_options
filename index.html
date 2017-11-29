@@ -13,6 +13,8 @@
 
       <p>Double click on a bubble to open the IMBD page for that movie.</p>
 
+      <input id="test" name="" value="">
+
     <script type="text/javascript">
       let rawData = "";
       let rawTitles = [];
@@ -108,22 +110,37 @@
           d3.select(this).classed("active", false);
         }
 
+// attr test helper
+        function changer(d) {
+          console.log('changify');
+          console.log(this.d3.select("#1"));
+        }
+
+
 //d3 function
         let cirlces = null;
-        let baseSize = 25;
+        let baseSize = 30;
 
-        let width = 800;
+        let width = 1000;
         let height = 600;
         let forceStrength = 0.05;
 
         let center = {x: width/2, y: height/2};
 
-        var svg = d3.select("body").append("svg")
+        // let svg;
+        // const svgrunner = () => {
+          // d3.select("svg").remove();
+          var svg = d3.select("body").append("svg")
           .attr("id", "chart")
           .attr("width", width)
           .attr("height", height)
+          .attr('fill', 'blue')
           // .append('g')
           // .attr("transform", "translate(0,0)")
+
+        // }
+        //
+        // svgrunner()
 
 // image mapping helpers
         var defs = svg.append("defs");
@@ -143,10 +160,11 @@
           .attr("xlink:href", d => d.imageUrls)
 
 // simulation
+
         var simulation = d3.forceSimulation()
         .force("x", d3.forceX(center.x).strength(forceStrength))
         .force("y", d3.forceY(center.y).strength(forceStrength))
-        .force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 2))
+        .force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 1))
         .on("tick", ticked); //KEY LINE FOR ACTIATION
 
 // draw circles
@@ -178,10 +196,21 @@
           .on("start", dragStart)
           .on("drag", dragged)
           .on("end", dragOver))
-          .on('click', d => {
-            if (d3.event.defaultPrevented) return;
-            window.open(d.links,'_blank');
-          })
+          .on("click", function() {
+            // dataCollection[2].sales = 100;
+            // console.log(x`${dataCollection[2].sales}`);
+            console.log('test');
+            // svgrunner()
+          });
+          // .on('click', d => {
+          //   if (d3.event.defaultPrevented) return;
+          //   // window.open(d.links,'_blank');
+          //   // console.log(window.d3.selectALL('.circle'));
+          //   // changer(d.rank)
+          //   console.log(d.rank);
+          //   // d3.select(this).attr('fill', 'green')
+          //   // this.attr('fill', 'green');
+          // })
 
 // node stuff
         simulation.nodes(dataCollection)

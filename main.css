@@ -12,6 +12,7 @@ h1 {
 
 #chart {
   background-color: grey;
+  background-image: url('http://images.wisegeek.com/red-curtains-in-movie-theater.jpg');
 }
 
 p {
@@ -33,4 +34,9 @@ p {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
   font: 12px helvetica;
+}
+
+.active {
+  stroke: #42f477;
+  stroke-width: 3px;
 }
