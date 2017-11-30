@@ -1,6 +1,5 @@
 body {
   display: flex;
-  /*justify-content: center;*/
   align-items: center;
   flex-direction: column;
   font-family: helvetica;
@@ -22,13 +21,7 @@ h1 {
   margin-bottom: 0px;
 }
 
-#chart {
-  /*background-color: grey;*/
-  /*background: url('http://images.wisegeek.com/red-curtains-in-movie-theater.jpg');*/*/
-}
-
 ul {
-  /*background-color: rgba(0, 0, 0, 0.5);*/
   color: white;
   text-align: center;
   padding: 20px;
@@ -63,8 +56,15 @@ ul {
 }
 
 #toggle {
-  background-color: #FFDF00;
   width: 200px;
   height: 40px;
   font-size: 15px;
+}
+
+.gross {
+  background-color: #FFDF00;
+}
+
+.hotness {
+  background-color: #F8AB00;
 }

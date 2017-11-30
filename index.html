@@ -15,7 +15,7 @@
       <li>◇ Hover over each bubble to see movie stats.</li>
     </ul>
 
-    <input type="button" id="toggle" onclick="toggleSize();" value="Size by HOTNESS!">
+    <input type="button" id="toggle" class="hotness" onclick="toggleSize();" value="Size by HOTNESS!">
 
     <script type="text/javascript">
       let rawData = "";
@@ -43,12 +43,14 @@
       function toggleSize() {
         if (defaultView == true) {
           document.getElementById("toggle").value = "Size by Gross Sales";
+          document.getElementById("toggle").className = "gross";
           document.getElementById("top-line").innerHTML = "Current top 10 box office hits sized by current hotness (weekend sales).";
           d3.selectAll('.circle').attr('r', d => (d.weekend * range / max) + baseSize);
           defaultView = false;
           simulation.force("collide", d3.forceCollide(d => (d.weekend * range / max) + baseSize + 1))
         } else {
           document.getElementById("toggle").value = "Size by HOTNESS!";
+          document.getElementById("toggle").className = "hotness";
           document.getElementById("top-line").innerHTML = "Current top 10 box office hits sized by gross sales.";
           d3.selectAll('.circle').attr('r', d => baseSize + (d.sales / 3));
           defaultView = true;
