@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>MOVIE TIME</h1>
-    <h3>Current top 10 box office hits sized by gross sales.</h3>
+    <h3 id="top-line">Current top 10 box office hits sized by gross sales.</h3>
     <ul>
       <li>◇ Double click on a bubble to open the IMBD page for that movie.</li>
       <li>◇ Hover over each bubble to see movie stats.</li>
@@ -46,11 +46,14 @@
 
 // button function
       function toggleSize() {
+
         if (defaultView == true) {
+          document.getElementById("top-line").innerHTML = "Current top 10 box office hits sized by current hotness (weekend sales).";
           d3.selectAll('.circle').attr('r', d => baseSize + (d.weekend / 3));
           defaultView = false;
           simulation.force("collide", d3.forceCollide(d => (d.weekend / 3) + baseSize + 1))
         } else {
+          document.getElementById("top-line").innerHTML = "Current top 10 box office hits sized by gross sales.";
           d3.selectAll('.circle').attr('r', d => baseSize + (d.sales / 3));
           defaultView = true;
           simulation.force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 1))

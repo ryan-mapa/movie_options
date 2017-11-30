@@ -9,7 +9,6 @@ body {
 
 h1 {
   text-align: center;
-  /*background-color: black;*/
   border-radius: 8px;
   width: 1000px;
   color: white;
@@ -17,8 +16,10 @@ h1 {
   margin-top: 25px;
 }
 
-h3 {
+#top-line {
   color: white;
+  font-weight: lighter;
+  margin-bottom: 0px;
 }
 
 #chart {
