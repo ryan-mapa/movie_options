@@ -57,7 +57,7 @@ ul {
   stroke-width: 3px;
 }
 
-.toggle {
+#toggle {
   background-color: #FFDF00;
   width: 200px;
   height: 40px;

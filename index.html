@@ -15,9 +15,11 @@
       <li>◇ Double click on a bubble to open the IMBD page for that movie.</li>
     </ul>
 
-    <input type="button" class="toggle" value="Toggle Hotness/Gross">
+    <input type="button" id="toggle" onclick="toggleSize();" value="Toggle Hotness/Gross">
 
     <script type="text/javascript">
+
+
       let rawData = "";
       let rawTitles = [], titles = [];
       let rawLinks = [], links = [];
@@ -29,6 +31,31 @@
 
       let dataCollection  = [];
       let defaultView = true;
+
+// d3 variables
+      let simulation;
+
+      let cirlces = null;
+      let baseSize = 50;
+
+      let width = 1200;
+      let height = 700;
+      let forceStrength = 0.07;
+
+      let center = {x: width/2, y: height/2};
+
+// button function
+      function toggleSize() {
+        if (defaultView == true) {
+          d3.selectAll('.circle').attr('r', d => baseSize + (d.weekend / 3));
+          defaultView = false;
+          simulation.force("collide", d3.forceCollide(d => (d.weekend / 3) + baseSize + 1))
+        } else {
+          d3.selectAll('.circle').attr('r', d => baseSize + (d.sales / 3));
+          defaultView = true;
+          simulation.force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 1))
+        }
+      }
 
       $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice', function(data) {
 
@@ -96,15 +123,6 @@
         }
 
 //d3 function
-        let cirlces = null;
-        let baseSize = 50;
-
-        let width = 1200;
-        let height = 700;
-        let forceStrength = 0.07;
-
-        let center = {x: width/2, y: height/2};
-
         var svg = d3.select("body").append("svg")
           .attr("id", "chart")
           .attr("width", width)
@@ -130,7 +148,7 @@
 
 // simulation
 
-        var simulation = d3.forceSimulation()
+        simulation = d3.forceSimulation()
         .force("x", d3.forceX(center.x).strength(forceStrength))
         .force("y", d3.forceY(center.y).strength(forceStrength))
         .force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 1))
@@ -165,21 +183,10 @@
           .on("start", dragStart)
           .on("drag", dragged)
           .on("end", dragOver))
-          .on("click", function() {
-            if (defaultView == true) {
-              d3.selectAll('.circle').attr('r', d => baseSize + (d.weekend / 3));
-              defaultView = false;
-              simulation.force("collide", d3.forceCollide(d => (d.weekend / 3) + baseSize + 1))
-            } else {
-              d3.selectAll('.circle').attr('r', d => baseSize + (d.sales / 3));
-              defaultView = true;
-              simulation.force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 1))
-            }
+          .on('click', d => {
+            if (d3.event.defaultPrevented) return;
+              window.open(d.links,'_blank');
           })
-          // .on('click', d => {
-          //   if (d3.event.defaultPrevented) return;
-          //     window.open(d.links,'_blank');
-          // })
           .attr('stroke', 'white')
           .attr('stroke-width', '1px')
 
