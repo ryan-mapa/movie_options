@@ -56,3 +56,10 @@ ul {
   stroke: #FFDF00;
   stroke-width: 3px;
 }
+
+.toggle {
+  background-color: #FFDF00;
+  width: 200px;
+  height: 40px;
+  font-size: 15px;
+}

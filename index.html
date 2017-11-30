@@ -15,7 +15,7 @@
       <li>◇ Double click on a bubble to open the IMBD page for that movie.</li>
     </ul>
 
-      <!-- <p> Hopefully this helps you pick a good movie to see in theatres. </p> -->
+    <input type="button" class="toggle" value="Toggle Hotness/Gross">
 
     <script type="text/javascript">
       let rawData = "";
@@ -28,6 +28,7 @@
       let testImageUrls = [], testLinks = [];
 
       let dataCollection  = [];
+      let defaultView = true;
 
       $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice', function(data) {
 
@@ -59,21 +60,12 @@
                     // bigImages: `${bigImageUrls[i]}`
                   }
         }
-        console.log(dataCollection);
 
-// // imageUrl test links
-//         links.forEach(link => {
-//           $.get(`https://cors-anywhere.herokuapp.com/${link}`, function(datas) {
-//             testImageUrls.push(datas.match(/<div class="poster">[\s\S]*?jpg"/g));
-//             testLinks = testImageUrls.map(img => img.slice(100, -1));
-//             newImage = datas.match(/<div class="poster">[\s\S]*?jpg"/g)[0]
-//                     .match(/src=.*?jpg"/g)[0]
-//                     .slice(5,-1);
-//             // console.log(newImage);
-// // dynamic loading
-//             d3.selectAll(".circle")
-//           });
-//         });
+        min = dataCollection[9].weekend;
+        max = dataCollection[0].weekend;
+        range = max - min;
+
+        console.log(dataCollection);
 
 // helpers
         const hoverText = d3.select("body").append("div")
@@ -109,24 +101,15 @@
 
         let width = 1200;
         let height = 700;
-        let forceStrength = 0.05;
+        let forceStrength = 0.07;
 
         let center = {x: width/2, y: height/2};
 
-        // let svg;
-        // const svgrunner = () => {
-          // d3.select("svg").remove();
-          var svg = d3.select("body").append("svg")
+        var svg = d3.select("body").append("svg")
           .attr("id", "chart")
           .attr("width", width)
           .attr("height", height)
           .attr('fill', 'blue')
-          // .append('g')
-          // .attr("transform", "translate(0,0)")
-
-        // }
-        //
-        // svgrunner()
 
 // image mapping helpers
         var defs = svg.append("defs");
@@ -182,21 +165,21 @@
           .on("start", dragStart)
           .on("drag", dragged)
           .on("end", dragOver))
-          // .on("click", function() {
-          //   // dataCollection[2].sales = 100;
-          //   // console.log(x`${dataCollection[2].sales}`);
-          //   console.log('test');
-          //   // svgrunner()
-          // });
-          .on('click', d => {
-            if (d3.event.defaultPrevented) return;
-              window.open(d.links,'_blank');
-            // console.log(window.d3.selectALL('.circle'));
-            // changer(d.rank)
-            // console.log(d.rank);
-            // d3.select(this).attr('fill', 'green')
-            // this.attr('fill', 'green');
+          .on("click", function() {
+            if (defaultView == true) {
+              d3.selectAll('.circle').attr('r', d => baseSize + (d.weekend / 3));
+              defaultView = false;
+              simulation.force("collide", d3.forceCollide(d => (d.weekend / 3) + baseSize + 1))
+            } else {
+              d3.selectAll('.circle').attr('r', d => baseSize + (d.sales / 3));
+              defaultView = true;
+              simulation.force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 1))
+            }
           })
+          // .on('click', d => {
+          //   if (d3.event.defaultPrevented) return;
+          //     window.open(d.links,'_blank');
+          // })
           .attr('stroke', 'white')
           .attr('stroke-width', '1px')
 
