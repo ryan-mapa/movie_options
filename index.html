@@ -34,6 +34,8 @@
 
 // d3 variables
       let simulation;
+      let hotnessScale;
+      let max, min, range;
 
       let cirlces = null;
       let baseSize = 50;
@@ -46,13 +48,12 @@
 
 // button function
       function toggleSize() {
-
         if (defaultView == true) {
           document.getElementById("toggle").value = "Size by Gross Sales";
           document.getElementById("top-line").innerHTML = "Current top 10 box office hits sized by current hotness (weekend sales).";
-          d3.selectAll('.circle').attr('r', d => baseSize + (d.weekend / 3));
+          d3.selectAll('.circle').attr('r', d => (d.weekend * range / max) + baseSize);
           defaultView = false;
-          simulation.force("collide", d3.forceCollide(d => (d.weekend / 3) + baseSize + 1))
+          simulation.force("collide", d3.forceCollide(d => (d.weekend * range / max) + baseSize + 1))
         } else {
           document.getElementById("toggle").value = "Size by HOTNESS!";
           document.getElementById("top-line").innerHTML = "Current top 10 box office hits sized by gross sales.";
@@ -96,6 +97,10 @@
         min = dataCollection[9].weekend;
         max = dataCollection[0].weekend;
         range = max - min;
+
+        hotnessScale = (d) => {
+          d / max
+        }
 
         console.log(dataCollection);
 
