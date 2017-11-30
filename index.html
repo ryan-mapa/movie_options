@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Movies!</title>
+    <title>Movie Time</title>
     <link rel="stylesheet" href="main.css">
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
@@ -168,7 +168,7 @@
             hoverText.html(
               `Name: ${d.titles}<br/>
                Gross Sales: $${d.sales}M<br/>
-               Rank: ${d.rank} (based on weekend)<br/>`
+               Hotness Rank: ${d.rank} (based on weekend)<br/>`
             );
             hoverText.style("visibility", "visible");
           })
@@ -196,7 +196,9 @@
             // console.log(d.rank);
             // d3.select(this).attr('fill', 'green')
             // this.attr('fill', 'green');
-          });
+          })
+          .attr('stroke', 'white')
+          .attr('stroke-width', '1px')
 
 // node stuff
         simulation.nodes(dataCollection)
