@@ -3,27 +3,33 @@ body {
   /*justify-content: center;*/
   align-items: center;
   flex-direction: column;
-  background-color: black;
   font-family: helvetica;
   background-image: url('background.jpg');
 }
 
 h1 {
   text-align: center;
-  background-color: grey;
+  /*background-color: black;*/
+  border-radius: 8px;
   width: 1000px;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 25px;
 }
 
 #chart {
   background-color: grey;
-  background-image: url('http://images.wisegeek.com/red-curtains-in-movie-theater.jpg');
+  background: url('http://images.wisegeek.com/red-curtains-in-movie-theater.jpg');
 }
 
-p {
-  background-color: grey;
+ul {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
   text-align: center;
   padding: 20px;
   width: 960px;
+  border-radius: 8px;
+  list-style: none;
 }
 
 .circle {
