@@ -9,10 +9,10 @@
   </head>
   <body>
     <h1>MOVIE TIME</h1>
+    <h3>Current top 10 box office hits sized by gross sales.</h3>
     <ul>
-      <li>◇ Current top 10 box office hits sized by gross sales.</li>
-      <li>◇ Hover over each bubble to see movie stats.</li>
       <li>◇ Double click on a bubble to open the IMBD page for that movie.</li>
+      <li>◇ Hover over each bubble to see movie stats.</li>
     </ul>
 
     <input type="button" id="toggle" onclick="toggleSize();" value="Toggle Hotness/Gross">
@@ -179,10 +179,12 @@
               .style("left",(d3.event.pageX+10)+"px");
           })
           .on("mouseout", () => hoverText.style("visibility", "hidden"))
-          .call(d3.drag()
-          .on("start", dragStart)
-          .on("drag", dragged)
-          .on("end", dragOver))
+          .call(
+            d3.drag()
+              .on("start", dragStart)
+              .on("drag", dragged)
+              .on("end", dragOver)
+          )
           .on('click', d => {
             if (d3.event.defaultPrevented) return;
               window.open(d.links,'_blank');

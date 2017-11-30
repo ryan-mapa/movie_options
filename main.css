@@ -17,6 +17,10 @@ h1 {
   margin-top: 25px;
 }
 
+h3 {
+  color: white;
+}
+
 #chart {
   /*background-color: grey;*/
   /*background: url('http://images.wisegeek.com/red-curtains-in-movie-theater.jpg');*/*/
