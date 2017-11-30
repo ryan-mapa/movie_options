@@ -23,7 +23,7 @@ h1 {
 }
 
 ul {
-  background-color: rgba(0, 0, 0, 0.5);
+  /*background-color: rgba(0, 0, 0, 0.5);*/
   color: white;
   text-align: center;
   padding: 20px;
@@ -49,6 +49,6 @@ ul {
 }
 
 .active {
-  stroke: #16ff26;
+  stroke: #FFDF00;
   stroke-width: 3px;
 }
