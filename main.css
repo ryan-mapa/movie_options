@@ -13,13 +13,13 @@ h1 {
   border-radius: 8px;
   width: 1000px;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   margin-top: 25px;
 }
 
 #chart {
-  /*background-color: grey;
-  background: url('http://images.wisegeek.com/red-curtains-in-movie-theater.jpg');*/
+  /*background-color: grey;*/
+  /*background: url('http://images.wisegeek.com/red-curtains-in-movie-theater.jpg');*/*/
 }
 
 ul {
@@ -29,7 +29,9 @@ ul {
   padding: 20px;
   width: 960px;
   border-radius: 8px;
+  font-size: 18px;
   list-style: none;
+  margin: 0px;
 }
 
 .circle {
