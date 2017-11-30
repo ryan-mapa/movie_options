@@ -18,8 +18,6 @@
     <input type="button" id="toggle" onclick="toggleSize();" value="Size by HOTNESS!">
 
     <script type="text/javascript">
-
-
       let rawData = "";
       let rawTitles = [], titles = [];
       let rawLinks = [], links = [];
@@ -28,22 +26,17 @@
       let rawWeekend = [], weekend = [];
       let rawBigImageUrls = [], bigImageUrls = [];
       let testImageUrls = [], testLinks = [];
-
       let dataCollection  = [];
       let defaultView = true;
 
 // d3 variables
       let simulation;
-      let hotnessScale;
       let max, min, range;
-
       let cirlces = null;
       let baseSize = 50;
-
       let width = 1200;
       let height = 700;
       let forceStrength = 0.07;
-
       let center = {x: width/2, y: height/2};
 
 // button function
@@ -63,6 +56,7 @@
         }
       }
 
+// scrape data
       $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice', function(data) {
 
 	      rawData = data.match(/<h1 class="header">[\s\S]*?<\/table>/g)[0];
@@ -79,7 +73,7 @@
         rawSales = rawData.match(/\$.*</g);
         sales = rawSales.map(sale  => parseFloat(sale.slice(1, -2)));
 
-        rawWeekend = rawData.match(/ \$.*?M/g); // $ with space in front
+        rawWeekend = rawData.match(/ \$.*?M/g);
         weekend = rawWeekend.map(sale  => parseFloat(sale.slice(2, -1)));
 
         for (var i = 0; i < 10; i++) {
@@ -90,19 +84,12 @@
                     imageUrls: `${imageUrls[i]}`,
                     sales: `${sales[i]}`,
                     weekend: `${weekend[i]}`
-                    // bigImages: `${bigImageUrls[i]}`
                   }
         }
 
         min = dataCollection[9].weekend;
         max = dataCollection[0].weekend;
         range = max - min;
-
-        hotnessScale = (d) => {
-          d / max
-        }
-
-        console.log(dataCollection);
 
 // helpers
         const hoverText = d3.select("body").append("div")
@@ -157,7 +144,6 @@
           .attr("xlink:href", d => d.imageUrls)
 
 // simulation
-
         simulation = d3.forceSimulation()
         .force("x", d3.forceX(center.x).strength(forceStrength))
         .force("y", d3.forceY(center.y).strength(forceStrength))
@@ -202,7 +188,7 @@
           .attr('stroke', 'white')
           .attr('stroke-width', '1px')
 
-// node stuff
+// nodes and ticked
         simulation.nodes(dataCollection)
           .on('tick', ticked)
 
@@ -212,9 +198,8 @@
             .attr("cy", d => d.y)
         }
 
-      }); //match to getJSON
-
+      });
     </script>
-    <!-- <script src="bubble.js"></script> -->
+
   </body>
 </html>
