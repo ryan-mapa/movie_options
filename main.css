@@ -3,7 +3,7 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: helvetica;
-  background-image: url('background.jpg');
+  background-image: url('docs/background.jpg');
 }
 
 h1 {
