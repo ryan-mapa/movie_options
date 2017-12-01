@@ -43,6 +43,7 @@ $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice',
 - babel
 
 ## Future additions
-- stuff
-- things
 - Expand beyond top 10 hits
+- Rotten tomatoes ratings visualization option
+- Critic ratings visualization option
+- Difference between critic and rotten tomatoes rating
