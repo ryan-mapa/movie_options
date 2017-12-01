@@ -1,0 +1,18 @@
+.search {
+  margin: 15px;
+  background-color: pink;
+}
+
+.chart {
+  margin: 20px;
+  background-color: grey;
+}
+
+text {
+    font: 10px sans-serif;
+    color: green;
+}
+
+.circle {
+  background-color: green;
+}

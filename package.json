@@ -1,0 +1,27 @@
+{
+  "name": "movie_options",
+  "version": "1.0.0",
+  "description": "live site: https://ryan-mapa.github.io/movie_options/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryan-mapa/movie_options.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryan-mapa/movie_options/issues"
+  },
+  "homepage": "https://github.com/ryan-mapa/movie_options#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "d3": "^4.12.0",
+    "webpack": "^3.9.1"
+  }
+}
