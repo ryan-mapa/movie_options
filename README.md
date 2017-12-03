@@ -5,6 +5,7 @@
 ## Demo
 ![movie_time_demo](docs/demo.gif)
 Changed size?
+new line
 
 ## Overview
 Movie time is a data visualization of live box office data from IMDB using the d3 library. Data is scraped from IMDB. The DOM is parsed through the use of regular expressions(regex).   
