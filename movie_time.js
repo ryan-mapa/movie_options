@@ -31,14 +31,14 @@ function toggleSize() {
     document.getElementById("top-line").innerHTML = "Current top 10 box office hits sized by current hotness (weekend sales).";
     d3.selectAll('.circle').attr('r', d => (d.weekend * range / max) + baseSize);
     defaultView = false;
-    simulation.force("collide", d3.forceCollide(d => (d.weekend * range / max) + baseSize + 1))
+    simulation.force("collide", d3.forceCollide(d => (d.weekend * range / max) + baseSize + 1));
   } else {
     document.getElementById("toggle").value = "Size by HOTNESS!";
     document.getElementById("toggle").className = "hotness";
     document.getElementById("top-line").innerHTML = "Current top 10 box office hits sized by gross sales.";
     d3.selectAll('.circle').attr('r', d => baseSize + (d.sales / 3));
     defaultView = true;
-    simulation.force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 1))
+    simulation.force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 1));
   }
 }
 
@@ -75,7 +75,7 @@ $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice',
 
   min = dataCollection[9].weekend;
   max = dataCollection[0].weekend;
-  range = max - min;
+  range = max - min + 40;
 
 // helpers
   const hoverText = d3.select("body").append("div")
