@@ -30,7 +30,7 @@ weekend = rawWeekend.map(sale  => parseFloat(sale.slice(2, -1)));
 
 Use it to help you choose what movie to see in theaters! Clearly see what movies are hot right now based on weekend stats and overall.
 
-Data is pulled form the site using cors-anywhere and jQuery:
+Data is pulled from the site using cors-anywhere and jQuery:
 ```Javascript
 $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice', function(data) { ...
 ```
@@ -47,3 +47,4 @@ $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice',
 - Rotten tomatoes ratings visualization option
 - Critic ratings visualization option
 - Difference between critic and rotten tomatoes rating
+- Look into snapshots of past data with https://archive.org/web/
