@@ -54,7 +54,7 @@ $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice',
   links = rawLinks.map(link => "http://www.imdb.com/" + link.slice(6, -3))
 
   rawImageUrls = rawData.match(/img src=".*?@\._/g);
-  imageUrls = rawImageUrls.map(img => img.slice(9) + "V1_SY1000_CR0,0,674,1000_AL_.jpg");
+  imageUrls = rawImageUrls.map(img => img.slice(9) + "V1_SY500_CR0,0,337,500_AL_.jpg");
 
   rawSales = rawData.match(/\$.*</g);
   sales = rawSales.map(sale  => parseFloat(sale.slice(1, -2)));
@@ -110,7 +110,7 @@ $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice',
     .attr("id", "chart")
     .attr("width", width)
     .attr("height", height)
-    .attr('fill', 'blue')
+    .attr('fill', 'blue');
 
 // image mapping helpers
   var defs = svg.append("defs");
@@ -127,7 +127,7 @@ $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice',
     .attr("height", 1.5)
     .attr("width", 1)
     .attr("preserveAspectRatio", "none")
-    .attr("xlink:href", d => d.imageUrls)
+    .attr("xlink:href", d => d.imageUrls);
 
 // simulation
   simulation = d3.forceSimulation()

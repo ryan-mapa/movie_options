@@ -11961,7 +11961,7 @@ $.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice',
 
   rawImageUrls = rawData.match(/img src=".*?@\._/g);
   imageUrls = rawImageUrls.map(function (img) {
-    return img.slice(9) + "V1_SY1000_CR0,0,674,1000_AL_.jpg";
+    return img.slice(9) + "V1_SY500_CR0,0,337,500_AL_.jpg";
   });
 
   rawSales = rawData.match(/\$.*</g);
