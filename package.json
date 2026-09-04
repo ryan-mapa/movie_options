@@ -1,10 +1,13 @@
 {
   "name": "movie_options",
   "version": "1.0.0",
-  "description": "live site: https://ryan-mapa.github.io/movie_options/",
-  "main": "index.js",
+  "description": "Bubble chart of the current top 10 box office films. Live site: https://ryan-mapa.github.io/movie_options/",
+  "main": "movie_time.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "refresh": "node scripts/refresh-data.mjs",
+    "start": "npm run refresh && npm run build && npx --yes http-server -p 8080 -c-1 ."
   },
   "repository": {
     "type": "git",
@@ -18,10 +21,13 @@
   },
   "homepage": "https://github.com/ryan-mapa/movie_options#readme",
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
-    "d3": "^4.12.0",
-    "webpack": "^3.9.1"
+    "d3": "^4.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "babel-loader": "^9.1.3",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4"
   }
 }

@@ -1,188 +1,167 @@
 import * as d3 from 'd3';
 
-let rawData = "";
-let rawTitles = [], titles = [];
-let rawLinks = [], links = [];
-let rawImageUrls = [], imageUrls = [];
-let rawSales = [], sales = [];
-let rawWeekend = [], weekend = [];
-let rawBigImageUrls = [], bigImageUrls = [];
-let testImageUrls = [], testLinks = [];
-let dataCollection  = [];
-let defaultView = true;
+// Layout
+const width = 1200;
+const height = 600;
+const center = { x: width / 2, y: height / 2 };
+const forceStrength = 0.07;
+const minRadius = 32;
+const maxRadius = 105;
 
-// d3 variables
 let simulation;
-let max, min, range;
-let cirlces = null;
-let baseSize = 50;
-let width = 1200;
-let height = 700;
-let forceStrength = 0.07;
-let center = {x: width/2, y: height/2};
+let circles;
+let radiusFor;          // active accessor: datum -> radius
+let showingGross = true;
 
-// button function
-document.getElementById("toggle").addEventListener('click', toggleSize);
+const byId = id => document.getElementById(id);
 
-function toggleSize() {
-  if (defaultView == true) {
-    document.getElementById("toggle").value = "Size by Gross Sales";
-    document.getElementById("toggle").className = "gross";
-    document.getElementById("top-line").innerHTML = "Current top 10 box office hits sized by current hotness (weekend sales).";
-    d3.selectAll('.circle').attr('r', d => (d.weekend * range / max) + baseSize);
-    defaultView = false;
-    simulation.force("collide", d3.forceCollide(d => (d.weekend * range / max) + baseSize + 1));
-  } else {
-    document.getElementById("toggle").value = "Size by HOTNESS!";
-    document.getElementById("toggle").className = "hotness";
-    document.getElementById("top-line").innerHTML = "Current top 10 box office hits sized by gross sales.";
-    d3.selectAll('.circle').attr('r', d => baseSize + (d.sales / 3));
-    defaultView = true;
-    simulation.force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 1));
-  }
+// Circle area scales with the value, so radius scales with its square root.
+// A linear radius makes a $890M film ~160x the area of a $5M one and blows out the canvas.
+function makeRadius(values) {
+  return d3.scaleSqrt()
+    .domain([d3.min(values), d3.max(values)])
+    .range([minRadius, maxRadius])
+    .clamp(true);
 }
 
-// scrape data
-$.get('https://cors-anywhere.herokuapp.com/http://www.imdb.com/chart/boxoffice', function(data) {
+function render({ weekend: weekendLabel, movies }) {
+  const grossScale = makeRadius(movies.map(m => m.sales));
+  const hotScale = makeRadius(movies.map(m => m.weekend));
 
-  rawData = data.match(/<h1 class="header">[\s\S]*?<\/table>/g)[0];
+  const grossRadius = d => grossScale(d.sales);
+  const hotRadius = d => hotScale(d.weekend);
+  radiusFor = grossRadius;
 
-  rawTitles = rawData.match(/ >.*?</g);
-  titles = rawTitles.map(title => title.slice(2, -1))
+  byId('weekend-label').textContent = weekendLabel;
 
-  rawLinks = rawData.match(/href="\/title.*?"\n>/g);
-  links = rawLinks.map(link => "http://www.imdb.com/" + link.slice(6, -3))
+  const hoverText = d3.select('body').append('div').attr('class', 'hover');
 
-  rawImageUrls = rawData.match(/img src=".*?@\._/g);
-  imageUrls = rawImageUrls.map(img => img.slice(9) + "V1_SY500_CR0,0,337,500_AL_.jpg");
+  const svg = d3.select('body').append('svg')
+    .attr('id', 'chart')
+    .attr('width', width)
+    .attr('height', height);
 
-  rawSales = rawData.match(/\$.*</g);
-  sales = rawSales.map(sale  => parseFloat(sale.slice(1, -2)));
+  // Each poster becomes a pattern the matching circle is filled with.
+  svg.append('defs').selectAll('.poster-art')
+    .data(movies)
+    .enter().append('pattern')
+    .attr('class', 'poster-art')
+    .attr('id', d => `poster-${d.rank}`)
+    .attr('height', '100%')
+    .attr('width', '100%')
+    .attr('patternContentUnits', 'objectBoundingBox')
+    .append('image')
+    .attr('height', 1.5)
+    .attr('width', 1)
+    .attr('preserveAspectRatio', 'none')
+    .attr('xlink:href', d => d.imageUrls);
 
-  rawWeekend = rawData.match(/ \$.*?M/g);
-  weekend = rawWeekend.map(sale  => parseFloat(sale.slice(2, -1)));
-
-  for (var i = 0; i < 10; i++) {
-    dataCollection[i] = {
-              rank: `${(i+1)}`,
-              titles: `${titles[i]}`,
-              links: `${links[i]}`,
-              imageUrls: `${imageUrls[i]}`,
-              sales: `${sales[i]}`,
-              weekend: `${weekend[i]}`
-            }
-  }
-
-  min = dataCollection[9].weekend;
-  max = dataCollection[0].weekend;
-  range = max - min + 40;
-
-// helpers
-  const hoverText = d3.select("body").append("div")
-    .attr("class", "hover")
-    .text("hoverText");
-
-// dragging helpers
   function dragStart(d) {
     if (!d3.event.active) simulation.alphaTarget(0.3).restart();
     d.fx = d.x, d.fy = d.y;
-    d3.select(this).raise().classed("active", true);
+    d3.select(this).raise().classed('active', true);
   }
-
   function dragged(d) {
     d.fx = d3.event.x, d.fy = d3.event.y;
   }
-
-  function dragOver(d) {
+  function dragEnd(d) {
     if (!d3.event.active) simulation.alphaTarget(0);
     d.fx = null, d.fy = null;
-    d3.select(this).classed("active", false);
+    d3.select(this).classed('active', false);
   }
 
-// attr test helper
-  function changer(d) {
-    console.log('changify');
-    console.log(this.d3.select("#1"));
-  }
+  // forceX/forceY are scaled by alpha, which decays to zero long before nodes
+  // starting at the phyllotaxis origin can travel to the center. Seeding them
+  // on a small ring around the center leaves only collisions to resolve.
+  movies.forEach((m, i) => {
+    const angle = (i / movies.length) * 2 * Math.PI;
+    m.x = center.x + Math.cos(angle) * 40;
+    m.y = center.y + Math.sin(angle) * 40;
+    m.r = grossRadius(m);
+    m.rTarget = m.r;
+  });
 
-//d3 function
-  var svg = d3.select("body").append("svg")
-    .attr("id", "chart")
-    .attr("width", width)
-    .attr("height", height)
-    .attr('fill', 'blue');
+  simulation = d3.forceSimulation(movies)
+    .force('x', d3.forceX(center.x).strength(forceStrength))
+    .force('y', d3.forceY(center.y).strength(forceStrength))
+    .force('collide', d3.forceCollide(d => d.rTarget + 1))
+    .on('tick', ticked);
 
-// image mapping helpers
-  var defs = svg.append("defs");
-
-  defs.selectAll(".poster-art")
-    .data(dataCollection)
-    .enter().append("pattern")
-    .attr("class", "poster-art")
-    .attr("id", d => d.rank)
-    .attr("height", "100%")
-    .attr("width", "100%")
-    .attr("patternContentUnits", "objectBoundingBox")
-    .append("image")
-    .attr("height", 1.5)
-    .attr("width", 1)
-    .attr("preserveAspectRatio", "none")
-    .attr("xlink:href", d => d.imageUrls);
-
-// simulation
-  simulation = d3.forceSimulation()
-  .force("x", d3.forceX(center.x).strength(forceStrength))
-  .force("y", d3.forceY(center.y).strength(forceStrength))
-  .force("collide", d3.forceCollide(d => (d.sales / 3) + baseSize + 1))
-  .on("tick", ticked); //KEY LINE FOR ACTIATION
-
-// draw circles
-  var circles = svg.selectAll(".circle") //circle element
-    .data(dataCollection)
-    .enter().append("circle")
-    .attr("class", "circle")
-    .attr("id", d => d.rank)
-    .attr("cx", d => center.x) // positions!
-    .attr("cy", d => center.y)
-    .attr("r", d => baseSize + (d.sales / 3))
-    .attr("text", d => d.titles)
-    .attr("fill", d => `url(#${d.rank})`) // fill content target id of rank
-    .on("mouseover", (d,i) => { //mouseover hoverText
+  circles = svg.selectAll('.circle')
+    .data(movies)
+    .enter().append('circle')
+    .attr('class', 'circle')
+    .attr('cx', center.x)
+    .attr('cy', center.y)
+    .attr('r', d => d.r)
+    .attr('fill', d => `url(#poster-${d.rank})`)
+    .attr('stroke', 'white')
+    .attr('stroke-width', '1px')
+    .on('mouseover', d => {
       hoverText.html(
         `Name: ${d.titles}<br/>
          Gross Sales: $${d.sales}M<br/>
          Weekend Sales: $${d.weekend}M<br/>
          Hotness Rank: ${d.rank} (based on weekend)<br/>`
       );
-      hoverText.style("visibility", "visible");
+      hoverText.style('visibility', 'visible');
     })
-    .on("mousemove", () => {
-      return hoverText
-        .style("top", (d3.event.pageY+10)+"px")
-        .style("left",(d3.event.pageX+10)+"px");
-    })
-    .on("mouseout", () => hoverText.style("visibility", "hidden"))
-    .call(
-      d3.drag()
-        .on("start", dragStart)
-        .on("drag", dragged)
-        .on("end", dragOver)
-    )
+    .on('mousemove', () => hoverText
+      .style('top', `${d3.event.pageY + 10}px`)
+      .style('left', `${d3.event.pageX + 10}px`))
+    .on('mouseout', () => hoverText.style('visibility', 'hidden'))
+    .call(d3.drag().on('start', dragStart).on('drag', dragged).on('end', dragEnd))
     .on('click', d => {
-      if (d3.event.defaultPrevented) return;
-        window.open(d.links,'_blank');
-    })
-    .attr('stroke', 'white')
-    .attr('stroke-width', '1px')
-
-// nodes and ticked
-  simulation.nodes(dataCollection)
-    .on('tick', ticked)
+      if (d3.event.defaultPrevented) return; // a drag, not a click
+      window.open(d.links, '_blank', 'noopener');
+    });
 
   function ticked() {
     circles
-      .attr("cx", d => d.x)
-      .attr("cy", d => d.y)
+      .attr('cx', d => d.x)
+      .attr('cy', d => d.y)
+      .attr('r', d => {
+        if (Math.abs(d.rTarget - d.r) < 0.1) d.r = d.rTarget;
+        else d.r += (d.rTarget - d.r) * 0.15;
+        return d.r;
+      });
   }
 
-});
+  byId('toggle').addEventListener('click', () => {
+    showingGross = !showingGross;
+    radiusFor = showingGross ? grossRadius : hotRadius;
+
+    const toggle = byId('toggle');
+    toggle.value = showingGross ? 'Size by HOTNESS!' : 'Size by Gross Sales';
+    toggle.className = showingGross ? 'hotness' : 'gross';
+    byId('top-line').textContent = showingGross
+      ? 'Top 10 box office hits sized by total gross sales.'
+      : 'Top 10 box office hits sized by current hotness (weekend sales).';
+
+    movies.forEach(m => { m.rTarget = radiusFor(m); });
+    // Re-setting the force re-runs its cached radius initialization.
+    simulation.force('collide', d3.forceCollide(d => d.rTarget + 1));
+    simulation.alpha(0.6).restart();
+  });
+}
+
+function fail(message) {
+  byId('toggle').style.display = 'none';
+  byId('top-line').textContent = message;
+}
+
+// Data is refreshed into data/boxoffice.json on a schedule, so this is a
+// same-origin request - no CORS proxy, no API key.
+fetch('data/boxoffice.json', { cache: 'no-cache' })
+  .then(res => {
+    if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+    return res.json();
+  })
+  .then(data => {
+    if (!data.movies || !data.movies.length) throw new Error('no movies in feed');
+    render(data);
+  })
+  .catch(err => {
+    console.error('Could not load box office data:', err);
+    fail('Sorry - box office data could not be loaded right now.');
+  });

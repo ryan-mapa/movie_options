@@ -34,11 +34,6 @@ ul {
   line-height: 1.5em;
 }
 
-.circle {
-  background-color: green;
-  color: green;
-}
-
 .hover {
   visibility: hidden;
   position: absolute;
@@ -67,4 +62,16 @@ ul {
 
 .hotness {
   background-color: #F8AB00;
+}
+
+#weekend-label {
+  color: white;
+  font-weight: lighter;
+  font-size: 14px;
+  margin: 12px 0 0;
+  opacity: 0.85;
+}
+
+.circle {
+  cursor: pointer;
 }
