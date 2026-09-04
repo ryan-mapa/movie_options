@@ -2,6 +2,8 @@
 
 [LIVE SITE](https://ryan-mapa.github.io/movie_options/)
 
+[![Refresh box office data](https://github.com/ryan-mapa/movie_options/actions/workflows/refresh-data.yml/badge.svg)](https://github.com/ryan-mapa/movie_options/actions/workflows/refresh-data.yml)
+
 ## Demo
 ![movie_time_demo](docs/demo.gif)
 
@@ -27,6 +29,7 @@ A [GitHub Actions workflow](.github/workflows/refresh-data.yml) runs `scripts/re
 daily, which scrapes the [Box Office Mojo weekend chart](https://www.boxofficemojo.com/weekend/chart/)
 plus each film's release page (for the poster and IMDb id) and commits the result when it
 changes. Box office figures only move once a week, so a daily refresh keeps the chart current.
+The job commits only when the numbers actually differ, so unchanged weekdays add no history.
 
 Because the data is a committed file rather than a live client-side request, a scraping
 failure leaves the last good data in place instead of blanking the chart.
@@ -53,6 +56,17 @@ Rebuild and commit it whenever `movie_time.js` changes.
 - Webpack 5 + Babel 7
 - GitHub Actions
 - HTML/CSS
+
+## Data source
+
+Box Office Mojo is used rather than IMDb because it still serves plain HTTP clients,
+including GitHub's runners; `imdb.com/chart/boxoffice` answers automated requests with an
+empty `202`. Columns are resolved by header text rather than position, so a column reorder
+fails loudly instead of silently swapping gross and weekend figures.
+
+There is no free, keyless API for weekend box office numbers, which is why this scrapes
+rather than calling an API. TMDB has neither weekend nor reliable gross figures for films
+still in theaters.
 
 ## What changed from the 2018 version
 The original version scraped IMDb in the browser through `cors-anywhere.herokuapp.com`.
