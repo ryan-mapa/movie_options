@@ -2,7 +2,7 @@
 // Rebuilds data/boxoffice.json from the Box Office Mojo weekend chart.
 // Run locally with `npm run refresh`; CI runs it on a schedule.
 
-import { writeFile } from 'fs/promises';
+import { readFile, writeFile } from 'fs/promises';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -88,6 +88,26 @@ async function main() {
     movies.push({ ...rest, links, imageUrls });
     console.log(`  ${m.rank}. ${m.titles} - weekend $${m.weekend}M / total $${m.sales}M`);
     await new Promise(r => setTimeout(r, 250)); // be polite
+  }
+
+  // `updated` would otherwise change on every run, so the file would always look
+  // dirty to git and the workflow would commit a new timestamp daily. Leave the
+  // file alone unless the figures themselves moved; `updated` then honestly means
+  // "when the data last changed".
+  let previous = null;
+  try {
+    previous = JSON.parse(await readFile(outFile, 'utf8'));
+  } catch {
+    // no existing file on the first run
+  }
+
+  const same = previous
+    && previous.weekend === weekendLabel
+    && JSON.stringify(previous.movies) === JSON.stringify(movies);
+
+  if (same) {
+    console.log(`\nNo change since ${previous.updated} - leaving data/boxoffice.json alone.`);
+    return;
   }
 
   const payload = { weekend: weekendLabel, updated: new Date().toISOString(), source: CHART, movies };
