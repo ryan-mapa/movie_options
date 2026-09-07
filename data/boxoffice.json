@@ -1,87 +1,87 @@
 {
-  "weekend": "Domestic 2026 Weekend 35",
-  "updated": "2026-09-04T18:00:31.564Z",
+  "weekend": "Domestic 2026 Weekend 36",
+  "updated": "2026-09-07T17:58:50.813Z",
   "source": "https://www.boxofficemojo.com/weekend/chart/",
   "movies": [
     {
       "rank": "1",
-      "titles": "Spider-Man: Brand New Day",
-      "sales": 891.82,
-      "weekend": 22.51,
-      "links": "https://www.imdb.com/title/tt22084616/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
-    },
-    {
-      "rank": "2",
-      "titles": "Coyote vs. Acme",
-      "sales": 15.91,
-      "weekend": 15.91,
-      "links": "https://www.imdb.com/title/tt1756855/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDg5NDFkNTctZWE2ZC00MDYzLThlYjItZTljZDY3NTcwNjA3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
-    },
-    {
-      "rank": "3",
       "titles": "The Odyssey",
-      "sales": 563.88,
-      "weekend": 14.35,
+      "sales": 584.78,
+      "weekend": 13,
       "links": "https://www.imdb.com/title/tt33764258/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNTcyNmJlZmQtNDUwYy00NDBjLTg1NGQtYTY2Y2UxMWM3NmI1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
     },
     {
+      "rank": "2",
+      "titles": "Spider-Man: Brand New Day",
+      "sales": 910.59,
+      "weekend": 10.83,
+      "links": "https://www.imdb.com/title/tt22084616/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
+    },
+    {
+      "rank": "3",
+      "titles": "By Any Means",
+      "sales": 7.42,
+      "weekend": 7.42,
+      "links": "https://www.imdb.com/title/tt34379051/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZTUwODQ5N2QtMGM3Ny00YTk1LWJlZTctMTE5ZTAzNTMwOGQxXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
+    },
+    {
       "rank": "4",
-      "titles": "Insidious: Out of the Further",
-      "sales": 43.73,
-      "weekend": 10.2,
-      "links": "https://www.imdb.com/title/tt32393988/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTY4YjM1OGItMDlmMi00OTU1LWEzM2MtZGMyZTQ1NzhiM2VhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
+      "titles": "Coyote vs. Acme",
+      "sales": 29.6,
+      "weekend": 7.09,
+      "links": "https://www.imdb.com/title/tt1756855/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDg5NDFkNTctZWE2ZC00MDYzLThlYjItZTljZDY3NTcwNjA3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
     },
     {
       "rank": "5",
-      "titles": "The Dog Stars",
-      "sales": 7.71,
-      "weekend": 7.71,
-      "links": "https://www.imdb.com/title/tt21285562/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOThjZGM1Y2QtYTZmOS00NGE3LTk0MjEtMWM2Y2QyM2VkMmE3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
+      "titles": "Cars2026 Re-release",
+      "sales": 6.1,
+      "weekend": 6.1,
+      "links": "https://www.imdb.com/title/tt0317219/",
+      "imageUrls": ""
     },
     {
       "rank": "6",
       "titles": "Buddy",
-      "sales": 5.53,
-      "weekend": 5.53,
+      "sales": 14.26,
+      "weekend": 5.75,
       "links": "https://www.imdb.com/title/tt37281055/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWRkNWJhNjYtY2FkZC00YjFlLWFjMjUtZGFhMjc5MGYyODE4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
     },
     {
       "rank": "7",
+      "titles": "Insidious: Out of the Further",
+      "sales": 51.65,
+      "weekend": 4.06,
+      "links": "https://www.imdb.com/title/tt32393988/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTY4YjM1OGItMDlmMi00OTU1LWEzM2MtZGMyZTQ1NzhiM2VhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
+    },
+    {
+      "rank": "8",
       "titles": "PAW Patrol: The Dino Movie",
-      "sales": 43.45,
-      "weekend": 5.02,
+      "sales": 48.48,
+      "weekend": 3.3,
       "links": "https://www.imdb.com/title/tt29356163/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BY2E2Y2Q0Y2ItZTUyZS00MzllLTkwYmQtYjdmNzM3NGRiYjFmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
     },
     {
-      "rank": "8",
-      "titles": "The End of Oak Street",
-      "sales": 45.98,
-      "weekend": 4.9,
-      "links": "https://www.imdb.com/title/tt27165187/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZGI0YmRjNWYtYTliYy00YzdjLTkzNzQtZWExNjA2ZDU5MzAwXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
-    },
-    {
       "rank": "9",
-      "titles": "Mutiny",
-      "sales": 13.25,
-      "weekend": 2.77,
-      "links": "https://www.imdb.com/title/tt32338669/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTVjMjVlZjktZTg1Zi00ZDdmLTk1ODItNDE1Y2I4MTg1MDQ0XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
+      "titles": "The End of Oak Street",
+      "sales": 50.64,
+      "weekend": 2.91,
+      "links": "https://www.imdb.com/title/tt27165187/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZDQ1MDhmZWQtNjdhOS00MGE0LTkxMTItN2Q4NjIyYzUzZmRlXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
     },
     {
       "rank": "10",
-      "titles": "Tony",
-      "sales": 11.05,
-      "weekend": 2.22,
-      "links": "https://www.imdb.com/title/tt33095251/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BNDc1NGEyMzAtZWNiNC00MDY0LTg2NmYtZWIxZmM0NTNhNjc0XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
+      "titles": "The Dog Stars",
+      "sales": 13.04,
+      "weekend": 2.7,
+      "links": "https://www.imdb.com/title/tt21285562/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOThjZGM1Y2QtYTZmOS00NGE3LTk0MjEtMWM2Y2QyM2VkMmE3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
     }
   ]
 }
