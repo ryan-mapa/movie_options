@@ -1,6 +1,6 @@
 {
   "weekend": "Domestic 2026 Weekend 36",
-  "updated": "2026-09-08T16:53:37.354Z",
+  "updated": "2026-09-09T16:55:47.731Z",
   "source": "https://www.boxofficemojo.com/weekend/chart/",
   "movies": [
     {
@@ -14,8 +14,8 @@
     {
       "rank": "2",
       "titles": "The Odyssey",
-      "sales": 584.83,
-      "weekend": 13.05,
+      "sales": 584.87,
+      "weekend": 13.1,
       "links": "https://www.imdb.com/title/tt33764258/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNTcyNmJlZmQtNDUwYy00NDBjLTg1NGQtYTY2Y2UxMWM3NmI1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
     },
@@ -30,40 +30,40 @@
     {
       "rank": "4",
       "titles": "By Any Means",
-      "sales": 7.5,
-      "weekend": 7.5,
+      "sales": 7.52,
+      "weekend": 7.52,
       "links": "https://www.imdb.com/title/tt34379051/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZTUwODQ5N2QtMGM3Ny00YTk1LWJlZTctMTE5ZTAzNTMwOGQxXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
     },
     {
       "rank": "5",
       "titles": "Insidious: Out of the Further",
-      "sales": 54.09,
-      "weekend": 6.5,
+      "sales": 54.1,
+      "weekend": 6.51,
       "links": "https://www.imdb.com/title/tt32393988/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTY4YjM1OGItMDlmMi00OTU1LWEzM2MtZGMyZTQ1NzhiM2VhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
     },
     {
       "rank": "6",
       "titles": "Cars2026 Re-release",
-      "sales": 6.2,
-      "weekend": 6.2,
+      "sales": 6.3,
+      "weekend": 6.3,
       "links": "https://www.imdb.com/title/tt0317219/",
       "imageUrls": ""
     },
     {
       "rank": "7",
       "titles": "Buddy",
-      "sales": 14.33,
-      "weekend": 5.81,
+      "sales": 14.32,
+      "weekend": 5.8,
       "links": "https://www.imdb.com/title/tt37281055/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWRkNWJhNjYtY2FkZC00YjFlLWFjMjUtZGFhMjc5MGYyODE4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
     },
     {
       "rank": "8",
       "titles": "PAW Patrol: The Dino Movie",
-      "sales": 48.48,
-      "weekend": 3.3,
+      "sales": 48.49,
+      "weekend": 3.31,
       "links": "https://www.imdb.com/title/tt29356163/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BY2E2Y2Q0Y2ItZTUyZS00MzllLTkwYmQtYjdmNzM3NGRiYjFmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
     },
@@ -78,8 +78,8 @@
     {
       "rank": "10",
       "titles": "The Dog Stars",
-      "sales": 13.14,
-      "weekend": 2.8,
+      "sales": 13.11,
+      "weekend": 2.77,
       "links": "https://www.imdb.com/title/tt21285562/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOThjZGM1Y2QtYTZmOS00NGE3LTk0MjEtMWM2Y2QyM2VkMmE3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg"
     }
