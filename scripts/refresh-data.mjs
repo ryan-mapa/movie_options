@@ -109,12 +109,26 @@ function posterFrom(page) {
   return og && /^https?:/.test(og) ? og : '';
 }
 
+// Mojo lists genres newline-separated inside a single span.
+function genreFrom(page) {
+  const block = (page.match(/<span[^>]*>\s*Genres?\s*<\/span>([\s\S]{0,400}?)<\/div>/i) || [])[1];
+  if (!block) return '';
+  // Split before strip(), which collapses the newlines that separate them.
+  return block
+    .replace(/<[^>]*>/g, '\n')
+    .split('\n')
+    .map(g => strip(g))
+    .filter(Boolean)
+    .join(', ');
+}
+
 async function artworkFor(relUrl) {
   const page = await get(relUrl);
   const tt = (page.match(/\/title\/(tt\d+)/) || [])[1];
   return {
     links: tt ? `https://www.imdb.com/title/${tt}/` : null,
     imageUrls: posterFrom(page),
+    genre: genreFrom(page),
   };
 }
 
@@ -150,11 +164,13 @@ async function main() {
     const rel = links.get(key(m.titles));
     m.links = `https://www.imdb.com/find/?q=${encodeURIComponent(m.titles)}`;
     m.imageUrls = '';
+    m.genre = '';
     if (rel) {
       try {
         const art = await artworkFor(rel);
         if (art.links) m.links = art.links;
         m.imageUrls = art.imageUrls;
+        m.genre = art.genre;
       } catch (err) {
         console.warn(`  ! ${m.titles}: ${err.message}`);
       }

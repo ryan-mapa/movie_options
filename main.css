@@ -67,6 +67,22 @@ ul {
   display: block;
 }
 
+/* Darken the top of the photo so the header reads cleanly over it. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 45vh;
+  background: linear-gradient(to bottom, rgba(10, 8, 6, 0.88), rgba(10, 8, 6, 0));
+  pointer-events: none;
+  z-index: 0;
+}
+
+h1, #top-line, ul, #toggle, #weekend-label, #chart {
+  position: relative;
+  z-index: 1;
+}
+
 .circle {
   cursor: pointer;
 }
@@ -89,6 +105,16 @@ ul {
   border-radius: 5px;
   font: 15px helvetica, arial, sans-serif;
   pointer-events: none;
+  line-height: 1.5;
+}
+
+.hover .hint {
+  display: block;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(232, 163, 61, 0.35);
+  color: var(--accent);
+  font-size: 12px;
 }
 
 .active {

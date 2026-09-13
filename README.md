@@ -32,7 +32,7 @@ fetch('data/boxoffice.json', { cache: 'no-cache' })
 A [GitHub Actions workflow](.github/workflows/refresh-data.yml) runs `scripts/refresh-data.mjs`
 daily. It reads the weekend chart from [The Numbers](https://www.the-numbers.com/box-office-chart/weekend/)
 for rank, title, weekend gross and lifetime gross, then fetches each film's Box Office Mojo
-release page for the poster and IMDb id, and commits the result when the figures change.
+release page for the poster, genre and IMDb id, and commits the result when the figures change.
 Box office figures only move once a week, so a daily refresh keeps the chart current.
 The job commits only when the numbers actually differ, so unchanged weekdays add no history.
 

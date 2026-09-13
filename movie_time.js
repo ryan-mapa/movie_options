@@ -123,10 +123,12 @@ function render({ weekend: weekendLabel, updated, movies: data }) {
     .attr('class', 'bubble')
     .on('mouseover', d => {
       hoverText.html(
-        `Name: ${d.titles}<br/>
+        `<strong>${d.titles}</strong><br/>
+         ${d.genre ? `Genre: ${d.genre}<br/>` : ''}
          Gross Sales: $${d.sales}M<br/>
          Weekend Sales: $${d.weekend}M<br/>
-         Hotness Rank: ${d.rank} (based on weekend)<br/>`
+         Hotness Rank: ${d.rank} (based on weekend)
+         <span class="hint">Double-click to open IMDb</span>`
       );
       hoverText.style('visibility', 'visible');
     })
@@ -135,7 +137,7 @@ function render({ weekend: weekendLabel, updated, movies: data }) {
       .style('left', `${d3.event.pageX + 10}px`))
     .on('mouseout', () => hoverText.style('visibility', 'hidden'))
     .call(d3.drag().on('start', dragStart).on('drag', dragged).on('end', dragEnd))
-    .on('click', d => {
+    .on('dblclick', d => {
       if (d3.event.defaultPrevented) return; // a drag, not a click
       window.open(d.links, '_blank', 'noopener');
     });
