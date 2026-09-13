@@ -1,82 +1,118 @@
+:root {
+  /* Burnt yellow, warm enough to read against the ticket photo. */
+  --accent: #E8A33D;
+  --accent-bright: #F5C563;
+  --accent-deep: #C87F1E;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 0 2px rgba(0, 0, 0, 0.8);
+}
+
 body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: helvetica;
+  font-family: helvetica, arial, sans-serif;
+  background-color: #14110e;
   background-image: url('docs/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  overflow: hidden;
 }
 
 h1 {
   text-align: center;
-  border-radius: 8px;
-  width: 1000px;
-  color: white;
-  margin-bottom: 0px;
-  margin-top: 25px;
+  color: var(--accent-bright);
+  letter-spacing: 3px;
+  text-shadow: var(--shadow);
+  margin: 18px 0 0;
 }
 
 #top-line {
-  color: white;
-  font-weight: lighter;
-  margin-bottom: 0px;
+  color: var(--accent);
+  font-weight: normal;
+  text-shadow: var(--shadow);
+  margin: 6px 0 0;
 }
 
 ul {
-  color: white;
+  color: var(--accent);
   text-align: center;
-  padding: 20px;
-  width: 960px;
-  border-radius: 8px;
-  font-size: 15px;
+  padding: 10px 20px 0;
+  max-width: 960px;
+  font-size: 14px;
   list-style: none;
-  margin: 0px;
+  margin: 0;
   font-weight: lighter;
-  line-height: 1.5em;
-}
-
-.hover {
-  visibility: hidden;
-  position: absolute;
-  padding: 10px;
-  color: white ;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 5px;
-  font: 16px helvetica;
-}
-
-.active {
-  stroke: #FFDF00;
-  stroke-width: 3px;
-}
-
-#toggle {
-  width: 200px;
-  height: 40px;
-  font-size: 15px;
-}
-
-.gross {
-  background-color: #FFDF00;
-}
-
-.hotness {
-  background-color: #F8AB00;
+  line-height: 1.6em;
+  text-shadow: var(--shadow);
 }
 
 #weekend-label {
-  color: white;
+  color: var(--accent);
   font-weight: lighter;
-  font-size: 14px;
-  margin: 12px 0 0;
-  opacity: 0.85;
+  font-size: 13px;
+  margin: 10px 0 0;
+  opacity: 0.9;
+  text-shadow: var(--shadow);
+}
+
+#weekend-label.stale {
+  color: #FF8A65;
+  opacity: 1;
+}
+
+#chart {
+  display: block;
 }
 
 .circle {
   cursor: pointer;
 }
 
-#weekend-label.stale {
-  color: #FFDF00;
-  opacity: 1;
+.bubble-label {
+  fill: var(--accent-bright);
+  pointer-events: none;
+  font-weight: bold;
+  text-shadow: var(--shadow);
+}
+
+.hover {
+  visibility: hidden;
+  position: absolute;
+  padding: 10px;
+  color: #fff;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.82);
+  border: 1px solid var(--accent-deep);
+  border-radius: 5px;
+  font: 15px helvetica, arial, sans-serif;
+  pointer-events: none;
+}
+
+.active {
+  stroke: var(--accent-bright);
+  stroke-width: 3px;
+}
+
+#toggle {
+  width: 210px;
+  height: 38px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #2b1d07;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.gross {
+  background-color: var(--accent-bright);
+}
+
+.hotness {
+  background-color: var(--accent);
 }

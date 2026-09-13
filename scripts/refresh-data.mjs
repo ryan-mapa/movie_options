@@ -24,7 +24,7 @@ async function get(url) {
   return res.text();
 }
 
-const strip = s => s.replace(/<[^>]*>/g, '')
+const strip = s => s.replace(/<[^>]*>/g, ' ')
   .replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'")
   .replace(/&quot;/g, '"').replace(/&nbsp;| /g, ' ')
   .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
@@ -94,13 +94,27 @@ async function mojoReleaseLinks(friday) {
   return map;
 }
 
+function posterFrom(page) {
+  // Preferred: the resizable form, trimmed at the "@._" marker so a consistent
+  // size can be requested.
+  const sized = (page.match(/https:\/\/m\.media-amazon\.com\/images\/M\/[^"']*?@+\._/) || [])[0];
+  if (sized) return `${sized.replace(/@+\._$/, '@._')}V1_SY500_CR0,0,337,500_AL_.jpg`;
+
+  // Re-releases and older entries sometimes carry only a plain image URL.
+  const plain = (page.match(/https:\/\/m\.media-amazon\.com\/images\/M\/[^"']+?\.(?:jpg|jpeg|png)/i) || [])[0];
+  if (plain) return plain;
+
+  const og = (page.match(/<meta[^>]+property="og:image"[^>]+content="([^"]+)"/i)
+    || page.match(/<meta[^>]+content="([^"]+)"[^>]+property="og:image"/i) || [])[1];
+  return og && /^https?:/.test(og) ? og : '';
+}
+
 async function artworkFor(relUrl) {
   const page = await get(relUrl);
   const tt = (page.match(/\/title\/(tt\d+)/) || [])[1];
-  const img = (page.match(/https:\/\/m\.media-amazon\.com\/images\/M\/[^"]*?@\._/) || [])[0];
   return {
     links: tt ? `https://www.imdb.com/title/${tt}/` : null,
-    imageUrls: img ? `${img}V1_SY500_CR0,0,337,500_AL_.jpg` : '',
+    imageUrls: posterFrom(page),
   };
 }
 

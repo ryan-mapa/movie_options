@@ -17,6 +17,10 @@ drawing crowds right now versus which have simply been out longest.
 - Hover for gross, weekend and hotness rank
 - Drag bubbles around the force layout
 
+The canvas sizes itself to the viewport and re-lays out on resize, targeting roughly 30%
+of the available area in bubbles. A film whose poster cannot be resolved is drawn as a
+labelled solid disc rather than an invisible circle.
+
 ## How the data works
 `data/boxoffice.json` is committed to the repo and served alongside the page, so the
 browser makes a same-origin request with no API key and no CORS proxy:
