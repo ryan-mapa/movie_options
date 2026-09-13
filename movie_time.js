@@ -128,7 +128,7 @@ function render({ weekend: weekendLabel, updated, movies: data }) {
          Gross Sales: $${d.sales}M<br/>
          Weekend Sales: $${d.weekend}M<br/>
          Hotness Rank: ${d.rank} (based on weekend)
-         <span class="hint">Double-click to open IMDb</span>`
+         <div class="hint">Double-click to open IMDb</div>`
       );
       hoverText.style('visibility', 'visible');
     })

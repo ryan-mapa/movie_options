@@ -72,8 +72,8 @@ body::before {
   content: '';
   position: fixed;
   inset: 0 0 auto 0;
-  height: 45vh;
-  background: linear-gradient(to bottom, rgba(10, 8, 6, 0.88), rgba(10, 8, 6, 0));
+  height: 38vh;
+  background: linear-gradient(to bottom, rgba(10, 8, 6, 0.72), rgba(10, 8, 6, 0));
   pointer-events: none;
   z-index: 0;
 }
