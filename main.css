@@ -78,9 +78,28 @@ body::before {
   z-index: 0;
 }
 
-h1, #top-line, ul, #toggle, #weekend-label, #chart {
+h1, #top-line, ul, #toggle, #weekend-label, #chart, #repo-link {
   position: relative;
   z-index: 1;
+}
+
+#repo-link {
+  padding: 6px 0 10px;
+  font-size: 12px;
+  text-align: center;
+}
+
+#repo-link a {
+  color: var(--accent);
+  opacity: 0.75;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(232, 163, 61, 0.4);
+  text-shadow: var(--shadow);
+}
+
+#repo-link a:hover {
+  opacity: 1;
+  border-bottom-color: var(--accent-bright);
 }
 
 .circle {

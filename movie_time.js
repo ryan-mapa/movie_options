@@ -17,8 +17,10 @@ const hotRadius = d => hotScale(d.weekend);
 // 1200x600 box, which left the chart marooned in the middle of a large screen.
 function measure() {
   const header = byId('weekend-label').getBoundingClientRect();
+  const footer = byId('repo-link');
+  const footerH = footer ? footer.getBoundingClientRect().height + 10 : 0;
   width = Math.max(320, window.innerWidth - 32);
-  height = Math.max(320, window.innerHeight - header.bottom - 24);
+  height = Math.max(320, window.innerHeight - header.bottom - 18 - footerH);
   center = { x: width / 2, y: height / 2 };
 }
 
@@ -73,7 +75,7 @@ function render({ weekend: weekendLabel, updated, movies: data }) {
   radiusFor = grossRadius;
 
   hoverText = d3.select('body').append('div').attr('class', 'hover');
-  svg = d3.select('body').append('svg').attr('id', 'chart');
+  svg = d3.select('body').insert('svg', '#repo-link').attr('id', 'chart');
 
   svg.append('defs').selectAll('.poster-art')
     .data(movies.filter(m => m.imageUrls))
