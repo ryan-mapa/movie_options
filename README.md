@@ -64,6 +64,52 @@ Rebuild and commit it whenever `movie_time.js` changes.
 - GitHub Actions
 - HTML/CSS
 
+## Monitoring and failure modes
+
+The refresh job is instrumented in three layers, and it is worth knowing which
+failures are loud and which are not.
+
+**Hard failures** call `process.exit(1)`, so the run fails, the badge above turns red
+and GitHub emails on failed scheduled workflows by default. These are:
+
+| Condition | Where |
+|---|---|
+| Any non-OK HTTP response | `get()` |
+| An expected column missing from the chart header | `parseWeekendChart()` |
+| Fewer than 10 films parsed across 3 attempted weekends | `main()` |
+| Zero posters resolved | `main()` |
+
+The last also covers Box Office Mojo being unreachable: no release links means no
+artwork, which trips the zero-poster guard. That is what surfaced Mojo's markup change.
+
+**Soft degradations** log a warning and still exit 0:
+
+- a single film's poster failing to resolve — the guard only checks for *zero* posters,
+  so 9 of 10 could fail and the run stays green
+- falling back to an older weekend, which serves last week's figures without flagging
+  that the current weekend was unavailable
+
+**The blind spot** is that GitHub disables scheduled workflows in a public repository
+after 60 days without repository activity. Nothing fails when that happens: no red
+badge, no alert, just a green badge on an increasingly old run. GitHub emails before
+disabling, but that is a single message that is easy to miss.
+
+The backstop is client-side: the page prints the date it was last updated and warns
+once the data is more than ten days old. That depends on somebody loading the page,
+and it waits ten days, so it is a safety net rather than monitoring. There is no
+external alerting, no metrics and no dead-man's switch.
+
+## Cost
+
+Nothing, because the repository is public: Actions has unlimited free minutes on
+standard runners for public repos, and Pages is free for them. Runs take 10-34
+seconds, roughly 103 minutes a year — comfortably inside the free tier's 2,000
+minutes per month even if the repo were made private. The job commits only when the
+figures move, so it adds about one 4 KB commit per weekend rather than 365 a year.
+
+The real costs are other people's bandwidth (12 outbound requests per run, paced 250ms
+apart) and the fact that both sources can change or block at any time, as Mojo did.
+
 ## Data source
 
 The figures come from The Numbers because Box Office Mojo moved its `/weekend/` chart to
