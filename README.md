@@ -26,13 +26,16 @@ fetch('data/boxoffice.json', { cache: 'no-cache' })
 ```
 
 A [GitHub Actions workflow](.github/workflows/refresh-data.yml) runs `scripts/refresh-data.mjs`
-daily, which scrapes the [Box Office Mojo weekend chart](https://www.boxofficemojo.com/weekend/chart/)
-plus each film's release page (for the poster and IMDb id) and commits the result when it
-changes. Box office figures only move once a week, so a daily refresh keeps the chart current.
+daily. It reads the weekend chart from [The Numbers](https://www.the-numbers.com/box-office-chart/weekend/)
+for rank, title, weekend gross and lifetime gross, then fetches each film's Box Office Mojo
+release page for the poster and IMDb id, and commits the result when the figures change.
+Box office figures only move once a week, so a daily refresh keeps the chart current.
 The job commits only when the numbers actually differ, so unchanged weekdays add no history.
 
 Because the data is a committed file rather than a live client-side request, a scraping
-failure leaves the last good data in place instead of blanking the chart.
+failure leaves the last good data in place instead of blanking the chart. To stop that
+degrading silently, the page prints the date it was last updated and warns on the page
+once the data is more than ten days old.
 
 Refresh it by hand with:
 
@@ -59,10 +62,15 @@ Rebuild and commit it whenever `movie_time.js` changes.
 
 ## Data source
 
-Box Office Mojo is used rather than IMDb because it still serves plain HTTP clients,
-including GitHub's runners; `imdb.com/chart/boxoffice` answers automated requests with an
-empty `202`. Columns are resolved by header text rather than position, so a column reorder
-fails loudly instead of silently swapping gross and weekend figures.
+The figures come from The Numbers because Box Office Mojo moved its `/weekend/` chart to
+client-side rendering in September 2026 — the URL still returns 200, but the HTML is a shell
+with no table, so scraping it silently yielded nothing. Mojo's `/release/` pages still render
+server-side, so they remain the source for posters and IMDb ids; the two sources are matched
+on a punctuation- and case-insensitive title key.
+
+IMDb itself is not used: `imdb.com/chart/boxoffice` answers automated requests with an empty
+`202`. Columns are resolved by header text rather than position, so a column reorder fails
+loudly instead of silently swapping gross and weekend figures.
 
 There is no free, keyless API for weekend box office numbers, which is why this scrapes
 rather than calling an API. TMDB has neither weekend nor reliable gross figures for films

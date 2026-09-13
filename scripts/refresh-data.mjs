@@ -1,6 +1,11 @@
 #!/usr/bin/env node
-// Rebuilds data/boxoffice.json from the Box Office Mojo weekend chart.
-// Run locally with `npm run refresh`; CI runs it on a schedule.
+// Rebuilds data/boxoffice.json.
+//
+// Figures come from The Numbers, which still server-renders its weekend chart.
+// Box Office Mojo's /weekend/ route moved to client-side rendering in Sept 2026
+// and now returns a shell page with no table, so it can no longer be scraped;
+// its /release/ pages still render server-side and remain the source for
+// posters and IMDb ids.
 
 import { readFile, writeFile } from 'fs/promises';
 import { fileURLToPath } from 'url';
@@ -8,8 +13,8 @@ import { dirname, join } from 'path';
 
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) ' +
   'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36';
-const CHART = 'https://www.boxofficemojo.com/weekend/chart/';
 const COUNT = 10;
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 const outFile = join(dirname(fileURLToPath(import.meta.url)), '..', 'data', 'boxoffice.json');
 
@@ -21,97 +26,155 @@ async function get(url) {
 
 const strip = s => s.replace(/<[^>]*>/g, '')
   .replace(/&amp;/g, '&').replace(/&#x27;|&#39;/g, "'")
-  .replace(/&quot;/g, '"').replace(/&nbsp;/g, ' ')
-  .replace(/&lt;/g, '<').replace(/&gt;/g, '>').trim();
+  .replace(/&quot;/g, '"').replace(/&nbsp;| /g, ' ')
+  .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+  .replace(/\s+/g, ' ').trim();
 
 const rowsOf = html => [...html.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)].map(m => m[1]);
 const cellsOf = row => [...row.matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/g)].map(m => strip(m[1]));
 
-// Dollars -> millions, matching the units the chart's sizing expects.
 const millions = s => {
   const n = Number(String(s).replace(/[^0-9.]/g, ''));
-  return Number.isFinite(n) ? Math.round((n / 1e6) * 100) / 100 : null;
+  return Number.isFinite(n) && n > 0 ? Math.round((n / 1e6) * 100) / 100 : null;
 };
 
-async function main() {
-  const chartHtml = await get(CHART);
+// Titles are compared across two sites, so ignore punctuation and case.
+const key = t => t.toLowerCase().replace(/[^a-z0-9]+/g, '');
 
-  const weekendLabel = strip((chartHtml.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1] || 'Latest weekend');
+const pad = n => String(n).padStart(2, '0');
+const iso = d => `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`;
 
-  const rows = rowsOf(chartHtml);
-  if (!rows.length) throw new Error('No table rows found - Box Office Mojo markup changed.');
+// The Numbers keys each weekend chart on that weekend's Friday.
+function mostRecentFriday(from = new Date()) {
+  const d = new Date(Date.UTC(from.getUTCFullYear(), from.getUTCMonth(), from.getUTCDate()));
+  d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() - 5 + 7) % 7));
+  return d;
+}
 
-  // Resolve columns by header text so a column reorder can't silently swap gross/weekend.
-  const header = cellsOf(rows[0]);
+function parseWeekendChart(html) {
+  const rows = rowsOf(html);
+  const header = rows.map(cellsOf).find(c => c.some(x => x.toLowerCase() === 'rank'));
+  if (!header) return [];
+
+  // Resolve by header text so a column reorder fails loudly instead of
+  // silently swapping the weekend and lifetime figures.
   const col = name => {
     const i = header.findIndex(h => h.toLowerCase() === name);
     if (i === -1) throw new Error(`Column "${name}" missing. Headers: ${header.join(' | ')}`);
     return i;
   };
-  const iRank = col('rank'), iTitle = col('release');
-  const iWeekend = col('gross'), iTotal = col('total gross');
+  const iTitle = col('title'), iWeekend = col('gross'), iTotal = col('total gross');
 
-  const picks = [];
-  for (const row of rows.slice(1)) {
-    if (picks.length >= COUNT) break;
+  const out = [];
+  for (const row of rows) {
     const c = cellsOf(row);
-    if (c.length < header.length) continue;
-    const relLink = (row.match(/href="(\/release\/[^"?]+)/) || [])[1];
-    if (!relLink || !c[iTitle]) continue;
-    const sales = millions(c[iTotal]), weekend = millions(c[iWeekend]);
-    if (sales === null || weekend === null) continue;
-    picks.push({
-      rank: String(picks.length + 1),
-      titles: c[iTitle],
-      sales,
-      weekend,
-      _rel: `https://www.boxofficemojo.com${relLink}`,
-    });
+    if (c.length !== header.length || !/^\d+$/.test(c[0])) continue;
+    const weekend = millions(c[iWeekend]);
+    const sales = millions(c[iTotal]);
+    if (!c[iTitle] || weekend === null || sales === null) continue;
+    out.push({ rank: String(out.length + 1), titles: c[iTitle], sales, weekend });
+    if (out.length >= COUNT) break;
   }
-  if (picks.length < COUNT) throw new Error(`Only parsed ${picks.length}/${COUNT} rows.`);
+  return out;
+}
 
-  // Each release page carries the poster and the IMDb title id.
-  const movies = [];
-  for (const m of picks) {
-    let links = 'https://www.imdb.com/', imageUrls = '';
-    try {
-      const page = await get(m._rel);
-      const tt = (page.match(/\/title\/(tt\d+)/) || [])[1];
-      if (tt) links = `https://www.imdb.com/title/${tt}/`;
-      // Trim at the "@._" marker and request a consistent poster size.
-      const img = (page.match(/https:\/\/m\.media-amazon\.com\/images\/M\/[^"]*?@\._/) || [])[0];
-      if (img) imageUrls = `${img}V1_SY500_CR0,0,337,500_AL_.jpg`;
-    } catch (err) {
-      console.warn(`  ! ${m.titles}: ${err.message}`);
-    }
-    const { _rel, ...rest } = m;
-    movies.push({ ...rest, links, imageUrls });
-    console.log(`  ${m.rank}. ${m.titles} - weekend $${m.weekend}M / total $${m.sales}M`);
-    await new Promise(r => setTimeout(r, 250)); // be polite
-  }
-
-  // `updated` would otherwise change on every run, so the file would always look
-  // dirty to git and the workflow would commit a new timestamp daily. Leave the
-  // file alone unless the figures themselves moved; `updated` then honestly means
-  // "when the data last changed".
-  let previous = null;
+// Box Office Mojo's daily page lists the same films with /release/ links.
+async function mojoReleaseLinks(friday) {
+  const map = new Map();
   try {
-    previous = JSON.parse(await readFile(outFile, 'utf8'));
-  } catch {
-    // no existing file on the first run
+    const html = await get(`https://www.boxofficemojo.com/date/${iso(friday)}/`);
+    for (const row of rowsOf(html)) {
+      const link = (row.match(/href="(\/release\/[^"?]+)/) || [])[1];
+      const c = cellsOf(row);
+      if (link && c[2]) map.set(key(c[2]), `https://www.boxofficemojo.com${link}`);
+    }
+  } catch (err) {
+    console.warn(`  ! could not load Box Office Mojo daily chart: ${err.message}`);
+  }
+  return map;
+}
+
+async function artworkFor(relUrl) {
+  const page = await get(relUrl);
+  const tt = (page.match(/\/title\/(tt\d+)/) || [])[1];
+  const img = (page.match(/https:\/\/m\.media-amazon\.com\/images\/M\/[^"]*?@\._/) || [])[0];
+  return {
+    links: tt ? `https://www.imdb.com/title/${tt}/` : null,
+    imageUrls: img ? `${img}V1_SY500_CR0,0,337,500_AL_.jpg` : '',
+  };
+}
+
+async function main() {
+  let friday = mostRecentFriday();
+  let movies = [];
+
+  // Step back a week at a time if a chart is not published yet.
+  for (let attempt = 0; attempt < 3 && movies.length < COUNT; attempt++) {
+    const d = new Date(friday);
+    d.setUTCDate(d.getUTCDate() - attempt * 7);
+    const url = `https://www.the-numbers.com/box-office-chart/weekend/` +
+      `${d.getUTCFullYear()}/${pad(d.getUTCMonth() + 1)}/${pad(d.getUTCDate())}`;
+    try {
+      const parsed = parseWeekendChart(await get(url));
+      if (parsed.length >= COUNT) { movies = parsed; friday = d; break; }
+      console.warn(`  ! ${iso(d)}: only ${parsed.length} rows, trying the previous weekend`);
+    } catch (err) {
+      console.warn(`  ! ${iso(d)}: ${err.message}`);
+    }
+  }
+  if (movies.length < COUNT) throw new Error(`Could not parse a weekend chart with ${COUNT} films.`);
+
+  const sunday = new Date(friday);
+  sunday.setUTCDate(sunday.getUTCDate() + 2);
+  const weekendLabel = friday.getUTCMonth() === sunday.getUTCMonth()
+    ? `Weekend of ${MONTHS[friday.getUTCMonth()]} ${friday.getUTCDate()}-${sunday.getUTCDate()}, ${sunday.getUTCFullYear()}`
+    : `Weekend of ${MONTHS[friday.getUTCMonth()]} ${friday.getUTCDate()} - ` +
+      `${MONTHS[sunday.getUTCMonth()]} ${sunday.getUTCDate()}, ${sunday.getUTCFullYear()}`;
+
+  const links = await mojoReleaseLinks(friday);
+  for (const m of movies) {
+    const rel = links.get(key(m.titles));
+    m.links = `https://www.imdb.com/find/?q=${encodeURIComponent(m.titles)}`;
+    m.imageUrls = '';
+    if (rel) {
+      try {
+        const art = await artworkFor(rel);
+        if (art.links) m.links = art.links;
+        m.imageUrls = art.imageUrls;
+      } catch (err) {
+        console.warn(`  ! ${m.titles}: ${err.message}`);
+      }
+      await new Promise(r => setTimeout(r, 250)); // be polite
+    }
+    console.log(`  ${m.rank}. ${m.titles} - weekend $${m.weekend}M / total $${m.sales}M` +
+      `${m.imageUrls ? '' : '  [no poster]'}`);
   }
 
+  const withArt = movies.filter(m => m.imageUrls).length;
+  if (!withArt) throw new Error('No posters resolved - the artwork source has changed.');
+  console.log(`\n  posters: ${withArt}/${movies.length}`);
+
+  // Only rewrite when the figures move, so the daily job does not commit a
+  // fresh timestamp every run.
+  let previous = null;
+  try { previous = JSON.parse(await readFile(outFile, 'utf8')); } catch { /* first run */ }
   const same = previous
     && previous.weekend === weekendLabel
     && JSON.stringify(previous.movies) === JSON.stringify(movies);
-
   if (same) {
     console.log(`\nNo change since ${previous.updated} - leaving data/boxoffice.json alone.`);
     return;
   }
 
-  const payload = { weekend: weekendLabel, updated: new Date().toISOString(), source: CHART, movies };
-  await writeFile(outFile, JSON.stringify(payload, null, 2) + '\n');
+  await writeFile(outFile, JSON.stringify({
+    weekend: weekendLabel,
+    updated: new Date().toISOString(),
+    sources: {
+      figures: 'https://www.the-numbers.com/box-office-chart/weekend/',
+      artwork: 'https://www.boxofficemojo.com/',
+    },
+    movies,
+  }, null, 2) + '\n');
   console.log(`\nWrote ${movies.length} movies for "${weekendLabel}" to data/boxoffice.json`);
 }
 

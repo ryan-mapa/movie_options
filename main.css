@@ -75,3 +75,8 @@ ul {
 .circle {
   cursor: pointer;
 }
+
+#weekend-label.stale {
+  color: #FFDF00;
+  opacity: 1;
+}

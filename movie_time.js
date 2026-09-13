@@ -24,7 +24,7 @@ function makeRadius(values) {
     .clamp(true);
 }
 
-function render({ weekend: weekendLabel, movies }) {
+function render({ weekend: weekendLabel, updated, movies }) {
   const grossScale = makeRadius(movies.map(m => m.sales));
   const hotScale = makeRadius(movies.map(m => m.weekend));
 
@@ -32,7 +32,20 @@ function render({ weekend: weekendLabel, movies }) {
   const hotRadius = d => hotScale(d.weekend);
   radiusFor = grossRadius;
 
-  byId('weekend-label').textContent = weekendLabel;
+  // Stale data used to be invisible: the chart looked healthy while the
+  // refresh job had been failing for days. Show the date, and say so when old.
+  const label = byId('weekend-label');
+  const asOf = updated ? new Date(updated) : null;
+  let text = weekendLabel;
+  if (asOf && !Number.isNaN(asOf.getTime())) {
+    const days = Math.floor((Date.now() - asOf.getTime()) / 86400000);
+    text += ` \u00b7 updated ${asOf.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}`;
+    if (days > 10) {
+      text += ` (${days} days ago - the refresh job may be failing)`;
+      label.classList.add('stale');
+    }
+  }
+  label.textContent = text;
 
   const hoverText = d3.select('body').append('div').attr('class', 'hover');
 
@@ -50,6 +63,7 @@ function render({ weekend: weekendLabel, movies }) {
     .attr('height', '100%')
     .attr('width', '100%')
     .attr('patternContentUnits', 'objectBoundingBox')
+    .filter(d => d.imageUrls)
     .append('image')
     .attr('height', 1.5)
     .attr('width', 1)
@@ -94,7 +108,7 @@ function render({ weekend: weekendLabel, movies }) {
     .attr('cx', center.x)
     .attr('cy', center.y)
     .attr('r', d => d.r)
-    .attr('fill', d => `url(#poster-${d.rank})`)
+    .attr('fill', d => (d.imageUrls ? `url(#poster-${d.rank})` : '#3f4a5a'))
     .attr('stroke', 'white')
     .attr('stroke-width', '1px')
     .on('mouseover', d => {
