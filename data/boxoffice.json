@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Sep 11-13, 2026",
-  "updated": "2026-09-13T16:25:42.041Z",
+  "updated": "2026-09-14T18:14:58.167Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -36,8 +36,8 @@
     {
       "rank": "4",
       "titles": "Runner",
-      "sales": 6.43,
-      "weekend": 6.43,
+      "sales": 6.46,
+      "weekend": 6.46,
       "links": "https://www.imdb.com/title/tt31349844/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOThmN2YyMzMtN2Y2Zi00MjViLTg2NzQtNGM0ZDU3ZDAyYThhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Comedy, Thriller"
@@ -45,47 +45,47 @@
     {
       "rank": "5",
       "titles": "Coyote vs. Acme",
-      "sales": 47.76,
-      "weekend": 6.24,
+      "sales": 47.68,
+      "weekend": 6.16,
       "links": "https://www.imdb.com/title/tt1756855/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDg5NDFkNTctZWE2ZC00MDYzLThlYjItZTljZDY3NTcwNjA3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, Animation, Comedy, Family, Fantasy"
     },
     {
       "rank": "6",
-      "titles": "Buddy",
-      "sales": 21.29,
-      "weekend": 3.52,
-      "links": "https://www.imdb.com/title/tt37281055/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWRkNWJhNjYtY2FkZC00YjFlLWFjMjUtZGFhMjc5MGYyODE4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Fantasy, Horror, Thriller"
-    },
-    {
-      "rank": "7",
       "titles": "Insidious: Out of the Further",
-      "sales": 60.53,
-      "weekend": 3.35,
+      "sales": 60.63,
+      "weekend": 3.45,
       "links": "https://www.imdb.com/title/tt32393988/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTY4YjM1OGItMDlmMi00OTU1LWEzM2MtZGMyZTQ1NzhiM2VhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Horror, Mystery, Thriller"
     },
     {
-      "rank": "8",
-      "titles": "Hope",
-      "sales": 5.01,
-      "weekend": 3.32,
-      "links": "https://www.imdb.com/title/tt27369017/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZjE3ZDI0MmItMDIyMC00NzU2LTk2OTQtZTUxYTlkMjlkNmY3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Drama, Horror, Mystery, Sci-Fi, Thriller"
+      "rank": "7",
+      "titles": "Buddy",
+      "sales": 21.18,
+      "weekend": 3.42,
+      "links": "https://www.imdb.com/title/tt37281055/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWRkNWJhNjYtY2FkZC00YjFlLWFjMjUtZGFhMjc5MGYyODE4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Fantasy, Horror, Thriller"
     },
     {
-      "rank": "9",
+      "rank": "8",
       "titles": "The Uprising",
       "sales": 3.25,
       "weekend": 3.25,
       "links": "https://www.imdb.com/title/tt36983905/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BYmNiZjVhOGItZTUxMi00MDUwLWJlNDItYTg2MTViZmQzMmU0XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Drama, History, War"
+    },
+    {
+      "rank": "9",
+      "titles": "Hope",
+      "sales": 4.93,
+      "weekend": 3.23,
+      "links": "https://www.imdb.com/title/tt27369017/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZjE3ZDI0MmItMDIyMC00NzU2LTk2OTQtZTUxYTlkMjlkNmY3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Action, Drama, Horror, Mystery, Sci-Fi, Thriller"
     },
     {
       "rank": "10",
