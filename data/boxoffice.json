@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Sep 11-13, 2026",
-  "updated": "2026-09-14T18:14:58.167Z",
+  "updated": "2026-09-15T17:23:05.577Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -18,8 +18,8 @@
     {
       "rank": "2",
       "titles": "Spider-Man: Brand New Day",
-      "sales": 935.17,
-      "weekend": 8.4,
+      "sales": 935.18,
+      "weekend": 8.41,
       "links": "https://www.imdb.com/title/tt22084616/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Sci-Fi"
@@ -27,8 +27,8 @@
     {
       "rank": "3",
       "titles": "The Odyssey",
-      "sales": 600.51,
-      "weekend": 7.4,
+      "sales": 600.7,
+      "weekend": 7.59,
       "links": "https://www.imdb.com/title/tt33764258/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNTcyNmJlZmQtNDUwYy00NDBjLTg1NGQtYTY2Y2UxMWM3NmI1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Fantasy"
@@ -45,23 +45,14 @@
     {
       "rank": "5",
       "titles": "Coyote vs. Acme",
-      "sales": 47.68,
-      "weekend": 6.16,
+      "sales": 47.93,
+      "weekend": 6.4,
       "links": "https://www.imdb.com/title/tt1756855/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDg5NDFkNTctZWE2ZC00MDYzLThlYjItZTljZDY3NTcwNjA3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, Animation, Comedy, Family, Fantasy"
     },
     {
       "rank": "6",
-      "titles": "Insidious: Out of the Further",
-      "sales": 60.63,
-      "weekend": 3.45,
-      "links": "https://www.imdb.com/title/tt32393988/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTY4YjM1OGItMDlmMi00OTU1LWEzM2MtZGMyZTQ1NzhiM2VhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Horror, Mystery, Thriller"
-    },
-    {
-      "rank": "7",
       "titles": "Buddy",
       "sales": 21.18,
       "weekend": 3.42,
@@ -70,10 +61,19 @@
       "genre": "Fantasy, Horror, Thriller"
     },
     {
+      "rank": "7",
+      "titles": "Insidious: Out of the Further",
+      "sales": 60.58,
+      "weekend": 3.4,
+      "links": "https://www.imdb.com/title/tt32393988/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTY4YjM1OGItMDlmMi00OTU1LWEzM2MtZGMyZTQ1NzhiM2VhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Horror, Mystery, Thriller"
+    },
+    {
       "rank": "8",
       "titles": "The Uprising",
-      "sales": 3.25,
-      "weekend": 3.25,
+      "sales": 3.31,
+      "weekend": 3.31,
       "links": "https://www.imdb.com/title/tt36983905/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BYmNiZjVhOGItZTUxMi00MDUwLWJlNDItYTg2MTViZmQzMmU0XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Drama, History, War"
@@ -90,8 +90,8 @@
     {
       "rank": "10",
       "titles": "By Any Means",
-      "sales": 13.49,
-      "weekend": 2.5,
+      "sales": 13.47,
+      "weekend": 2.48,
       "links": "https://www.imdb.com/title/tt34379051/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZTUwODQ5N2QtMGM3Ny00YTk1LWJlZTctMTE5ZTAzNTMwOGQxXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Crime, Thriller"
