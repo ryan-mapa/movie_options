@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Sep 11-13, 2026",
-  "updated": "2026-09-15T17:23:05.577Z",
+  "updated": "2026-09-16T17:21:58.934Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -54,8 +54,8 @@
     {
       "rank": "6",
       "titles": "Buddy",
-      "sales": 21.18,
-      "weekend": 3.42,
+      "sales": 21.39,
+      "weekend": 3.62,
       "links": "https://www.imdb.com/title/tt37281055/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWRkNWJhNjYtY2FkZC00YjFlLWFjMjUtZGFhMjc5MGYyODE4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Fantasy, Horror, Thriller"
