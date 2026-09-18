@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Sep 11-13, 2026",
-  "updated": "2026-09-16T17:21:58.934Z",
+  "updated": "2026-09-18T16:46:10.594Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -13,7 +13,7 @@
       "weekend": 30,
       "links": "https://www.imdb.com/title/tt32588798/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWUyY2UyNjgtYTg5MC00MDZmLWE1MzEtZmU2YWE2ZTMzMjUwXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Comedy, Drama, Fantasy, Romance"
+      "genre": "Comedy, Fantasy, Romance"
     },
     {
       "rank": "2",
