@@ -1,6 +1,6 @@
 {
-  "weekend": "Weekend of Sep 11-13, 2026",
-  "updated": "2026-09-18T16:46:10.594Z",
+  "weekend": "Weekend of Sep 18-20, 2026",
+  "updated": "2026-09-20T16:35:54.372Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -8,93 +8,93 @@
   "movies": [
     {
       "rank": "1",
+      "titles": "Resident Evil",
+      "sales": 60,
+      "weekend": 60,
+      "links": "https://www.imdb.com/title/tt35538033/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZGVmNzRlZTctNTU2OS00MTQwLWI2ZWQtOGViMjc4ODNlNzVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Action, Horror, Sci-Fi"
+    },
+    {
+      "rank": "2",
       "titles": "Practical Magic 2",
-      "sales": 30,
-      "weekend": 30,
+      "sales": 50.03,
+      "weekend": 12.16,
       "links": "https://www.imdb.com/title/tt32588798/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWUyY2UyNjgtYTg5MC00MDZmLWE1MzEtZmU2YWE2ZTMzMjUwXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Comedy, Fantasy, Romance"
     },
     {
-      "rank": "2",
+      "rank": "3",
       "titles": "Spider-Man: Brand New Day",
-      "sales": 935.18,
-      "weekend": 8.41,
+      "sales": 944.5,
+      "weekend": 6.5,
       "links": "https://www.imdb.com/title/tt22084616/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Sci-Fi"
     },
     {
-      "rank": "3",
+      "rank": "4",
       "titles": "The Odyssey",
-      "sales": 600.7,
-      "weekend": 7.59,
+      "sales": 609.76,
+      "weekend": 4.9,
       "links": "https://www.imdb.com/title/tt33764258/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNTcyNmJlZmQtNDUwYy00NDBjLTg1NGQtYTY2Y2UxMWM3NmI1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Fantasy"
     },
     {
-      "rank": "4",
-      "titles": "Runner",
-      "sales": 6.46,
-      "weekend": 6.46,
-      "links": "https://www.imdb.com/title/tt31349844/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOThmN2YyMzMtN2Y2Zi00MjViLTg2NzQtNGM0ZDU3ZDAyYThhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Comedy, Thriller"
-    },
-    {
       "rank": "5",
       "titles": "Coyote vs. Acme",
-      "sales": 47.93,
-      "weekend": 6.4,
+      "sales": 54.82,
+      "weekend": 4.51,
       "links": "https://www.imdb.com/title/tt1756855/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDg5NDFkNTctZWE2ZC00MDYzLThlYjItZTljZDY3NTcwNjA3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, Animation, Comedy, Family, Fantasy"
     },
     {
       "rank": "6",
-      "titles": "Buddy",
-      "sales": 21.39,
-      "weekend": 3.62,
-      "links": "https://www.imdb.com/title/tt37281055/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWRkNWJhNjYtY2FkZC00YjFlLWFjMjUtZGFhMjc5MGYyODE4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Fantasy, Horror, Thriller"
+      "titles": "Runner",
+      "sales": 11.99,
+      "weekend": 3.18,
+      "links": "https://www.imdb.com/title/tt31349844/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOThmN2YyMzMtN2Y2Zi00MjViLTg2NzQtNGM0ZDU3ZDAyYThhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Action, Comedy, Thriller"
     },
     {
       "rank": "7",
-      "titles": "Insidious: Out of the Further",
-      "sales": 60.58,
-      "weekend": 3.4,
-      "links": "https://www.imdb.com/title/tt32393988/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTY4YjM1OGItMDlmMi00OTU1LWEzM2MtZGMyZTQ1NzhiM2VhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Horror, Mystery, Thriller"
+      "titles": "Daniel and the Fiery Furnace",
+      "sales": 3.14,
+      "weekend": 3.14,
+      "links": "https://www.imdb.com/title/tt37542993/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BNmY0MmU4ODktNTEzOC00OWFhLTk4NzctMTBhZjI2MzgxNjU1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Drama"
     },
     {
       "rank": "8",
-      "titles": "The Uprising",
-      "sales": 3.31,
-      "weekend": 3.31,
-      "links": "https://www.imdb.com/title/tt36983905/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BYmNiZjVhOGItZTUxMi00MDUwLWJlNDItYTg2MTViZmQzMmU0XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Drama, History, War"
+      "titles": "The Transformers: The Movie",
+      "sales": 4.16,
+      "weekend": 3.1,
+      "links": "https://www.imdb.com/find/?q=The%20Transformers%3A%20The%20Movie",
+      "imageUrls": "",
+      "genre": ""
     },
     {
       "rank": "9",
-      "titles": "Hope",
-      "sales": 4.93,
-      "weekend": 3.23,
-      "links": "https://www.imdb.com/title/tt27369017/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZjE3ZDI0MmItMDIyMC00NzU2LTk2OTQtZTUxYTlkMjlkNmY3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Drama, Horror, Mystery, Sci-Fi, Thriller"
+      "titles": "The Weight",
+      "sales": 2.32,
+      "weekend": 2.32,
+      "links": "https://www.imdb.com/title/tt10794054/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZWU1NWY0MzctYmFiYS00MDU3LWFlNDItZDc5ZGY3Y2JiYTI4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Action, Adventure, Crime, Drama, Thriller"
     },
     {
       "rank": "10",
-      "titles": "By Any Means",
-      "sales": 13.47,
-      "weekend": 2.48,
-      "links": "https://www.imdb.com/title/tt34379051/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZTUwODQ5N2QtMGM3Ny00YTk1LWJlZTctMTE5ZTAzNTMwOGQxXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Crime, Thriller"
+      "titles": "Buddy",
+      "sales": 24.83,
+      "weekend": 1.93,
+      "links": "https://www.imdb.com/title/tt37281055/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWRkNWJhNjYtY2FkZC00YjFlLWFjMjUtZGFhMjc5MGYyODE4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Fantasy, Horror, Thriller"
     }
   ]
 }
