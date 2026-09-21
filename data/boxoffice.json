@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Sep 18-20, 2026",
-  "updated": "2026-09-20T16:35:54.372Z",
+  "updated": "2026-09-21T18:22:07.200Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -9,8 +9,8 @@
     {
       "rank": "1",
       "titles": "Resident Evil",
-      "sales": 60,
-      "weekend": 60,
+      "sales": 60.2,
+      "weekend": 60.2,
       "links": "https://www.imdb.com/title/tt35538033/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZGVmNzRlZTctNTU2OS00MTQwLWI2ZWQtOGViMjc4ODNlNzVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Horror, Sci-Fi"
@@ -18,7 +18,7 @@
     {
       "rank": "2",
       "titles": "Practical Magic 2",
-      "sales": 50.03,
+      "sales": 50.04,
       "weekend": 12.16,
       "links": "https://www.imdb.com/title/tt32588798/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWUyY2UyNjgtYTg5MC00MDZmLWE1MzEtZmU2YWE2ZTMzMjUwXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
@@ -45,23 +45,14 @@
     {
       "rank": "5",
       "titles": "Coyote vs. Acme",
-      "sales": 54.82,
-      "weekend": 4.51,
+      "sales": 54.71,
+      "weekend": 4.41,
       "links": "https://www.imdb.com/title/tt1756855/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDg5NDFkNTctZWE2ZC00MDYzLThlYjItZTljZDY3NTcwNjA3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, Animation, Comedy, Family, Fantasy"
     },
     {
       "rank": "6",
-      "titles": "Runner",
-      "sales": 11.99,
-      "weekend": 3.18,
-      "links": "https://www.imdb.com/title/tt31349844/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOThmN2YyMzMtN2Y2Zi00MjViLTg2NzQtNGM0ZDU3ZDAyYThhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Comedy, Thriller"
-    },
-    {
-      "rank": "7",
       "titles": "Daniel and the Fiery Furnace",
       "sales": 3.14,
       "weekend": 3.14,
@@ -70,13 +61,22 @@
       "genre": "Drama"
     },
     {
-      "rank": "8",
+      "rank": "7",
       "titles": "The Transformers: The Movie",
       "sales": 4.16,
       "weekend": 3.1,
       "links": "https://www.imdb.com/find/?q=The%20Transformers%3A%20The%20Movie",
       "imageUrls": "",
       "genre": ""
+    },
+    {
+      "rank": "8",
+      "titles": "Runner",
+      "sales": 11.81,
+      "weekend": 3.01,
+      "links": "https://www.imdb.com/title/tt31349844/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOThmN2YyMzMtN2Y2Zi00MjViLTg2NzQtNGM0ZDU3ZDAyYThhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Action, Comedy, Thriller"
     },
     {
       "rank": "9",
@@ -90,8 +90,8 @@
     {
       "rank": "10",
       "titles": "Buddy",
-      "sales": 24.83,
-      "weekend": 1.93,
+      "sales": 24.85,
+      "weekend": 1.95,
       "links": "https://www.imdb.com/title/tt37281055/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWRkNWJhNjYtY2FkZC00YjFlLWFjMjUtZGFhMjc5MGYyODE4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Fantasy, Horror, Thriller"
