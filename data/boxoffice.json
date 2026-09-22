@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Sep 18-20, 2026",
-  "updated": "2026-09-21T18:22:07.200Z",
+  "updated": "2026-09-22T17:24:56.886Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -9,8 +9,8 @@
     {
       "rank": "1",
       "titles": "Resident Evil",
-      "sales": 60.2,
-      "weekend": 60.2,
+      "sales": 60.15,
+      "weekend": 60.15,
       "links": "https://www.imdb.com/title/tt35538033/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZGVmNzRlZTctNTU2OS00MTQwLWI2ZWQtOGViMjc4ODNlNzVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Horror, Sci-Fi"
@@ -27,8 +27,8 @@
     {
       "rank": "3",
       "titles": "Spider-Man: Brand New Day",
-      "sales": 944.5,
-      "weekend": 6.5,
+      "sales": 944.42,
+      "weekend": 6.42,
       "links": "https://www.imdb.com/title/tt22084616/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Sci-Fi"
@@ -36,8 +36,8 @@
     {
       "rank": "4",
       "titles": "The Odyssey",
-      "sales": 609.76,
-      "weekend": 4.9,
+      "sales": 609.81,
+      "weekend": 4.95,
       "links": "https://www.imdb.com/title/tt33764258/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNTcyNmJlZmQtNDUwYy00NDBjLTg1NGQtYTY2Y2UxMWM3NmI1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Fantasy"
@@ -54,8 +54,8 @@
     {
       "rank": "6",
       "titles": "Daniel and the Fiery Furnace",
-      "sales": 3.14,
-      "weekend": 3.14,
+      "sales": 3.3,
+      "weekend": 3.3,
       "links": "https://www.imdb.com/title/tt37542993/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNmY0MmU4ODktNTEzOC00OWFhLTk4NzctMTBhZjI2MzgxNjU1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Drama"
@@ -81,8 +81,8 @@
     {
       "rank": "9",
       "titles": "The Weight",
-      "sales": 2.32,
-      "weekend": 2.32,
+      "sales": 2.3,
+      "weekend": 2.3,
       "links": "https://www.imdb.com/title/tt10794054/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZWU1NWY0MzctYmFiYS00MDU3LWFlNDItZDc5ZGY3Y2JiYTI4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Crime, Drama, Thriller"
@@ -90,7 +90,7 @@
     {
       "rank": "10",
       "titles": "Buddy",
-      "sales": 24.85,
+      "sales": 24.86,
       "weekend": 1.95,
       "links": "https://www.imdb.com/title/tt37281055/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWRkNWJhNjYtY2FkZC00YjFlLWFjMjUtZGFhMjc5MGYyODE4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
