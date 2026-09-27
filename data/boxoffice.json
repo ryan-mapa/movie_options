@@ -1,6 +1,6 @@
 {
-  "weekend": "Weekend of Sep 18-20, 2026",
-  "updated": "2026-09-22T17:24:56.886Z",
+  "weekend": "Weekend of Sep 25-27, 2026",
+  "updated": "2026-09-27T17:20:28.947Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -8,93 +8,93 @@
   "movies": [
     {
       "rank": "1",
+      "titles": "Avengers: Endgame",
+      "sales": 884.37,
+      "weekend": 26,
+      "links": "https://www.imdb.com/find/?q=Avengers%3A%20Endgame",
+      "imageUrls": "",
+      "genre": ""
+    },
+    {
+      "rank": "2",
       "titles": "Resident Evil",
-      "sales": 60.15,
-      "weekend": 60.15,
+      "sales": 103.48,
+      "weekend": 23.3,
       "links": "https://www.imdb.com/title/tt35538033/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZGVmNzRlZTctNTU2OS00MTQwLWI2ZWQtOGViMjc4ODNlNzVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Horror, Sci-Fi"
     },
     {
-      "rank": "2",
+      "rank": "3",
+      "titles": "Heart of the Beast",
+      "sales": 20,
+      "weekend": 20,
+      "links": "https://www.imdb.com/title/tt7526136/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDVlMTRhMjgtMjdmZi00NjJhLWExMmYtODExNWJkZGZjNjdhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Action, Adventure, Drama, Thriller"
+    },
+    {
+      "rank": "4",
+      "titles": "Primetime",
+      "sales": 19.2,
+      "weekend": 19.2,
+      "links": "https://www.imdb.com/title/tt34206385/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTcyZGI2NWQtOTU3NS00NTEyLTliNDItNTQyNmFkMGZmZGQzXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Biography, Crime, Drama, Thriller"
+    },
+    {
+      "rank": "5",
+      "titles": "Forgotten Island",
+      "sales": 12.8,
+      "weekend": 12.8,
+      "links": "https://www.imdb.com/title/tt36583977/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWJlY2JiNTMtYTAwYy00NGFiLTkwYTEtM2VmNDc4MzM5YmJiXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Action, Adventure, Animation, Comedy, Family, Fantasy, Music, Mystery"
+    },
+    {
+      "rank": "6",
       "titles": "Practical Magic 2",
-      "sales": 50.04,
-      "weekend": 12.16,
+      "sales": 59.84,
+      "weekend": 5.68,
       "links": "https://www.imdb.com/title/tt32588798/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWUyY2UyNjgtYTg5MC00MDZmLWE1MzEtZmU2YWE2ZTMzMjUwXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Comedy, Fantasy, Romance"
     },
     {
-      "rank": "3",
+      "rank": "7",
       "titles": "Spider-Man: Brand New Day",
-      "sales": 944.42,
-      "weekend": 6.42,
+      "sales": 950.68,
+      "weekend": 4.1,
       "links": "https://www.imdb.com/title/tt22084616/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Sci-Fi"
     },
     {
-      "rank": "4",
+      "rank": "8",
       "titles": "The Odyssey",
-      "sales": 609.81,
-      "weekend": 4.95,
+      "sales": 616.52,
+      "weekend": 3.7,
       "links": "https://www.imdb.com/title/tt33764258/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNTcyNmJlZmQtNDUwYy00NDBjLTg1NGQtYTY2Y2UxMWM3NmI1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Fantasy"
     },
     {
-      "rank": "5",
+      "rank": "9",
       "titles": "Coyote vs. Acme",
-      "sales": 54.71,
-      "weekend": 4.41,
+      "sales": 58.39,
+      "weekend": 1.91,
       "links": "https://www.imdb.com/title/tt1756855/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDg5NDFkNTctZWE2ZC00MDYzLThlYjItZTljZDY3NTcwNjA3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, Animation, Comedy, Family, Fantasy"
     },
     {
-      "rank": "6",
+      "rank": "10",
       "titles": "Daniel and the Fiery Furnace",
-      "sales": 3.3,
-      "weekend": 3.3,
+      "sales": 6.2,
+      "weekend": 1.51,
       "links": "https://www.imdb.com/title/tt37542993/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNmY0MmU4ODktNTEzOC00OWFhLTk4NzctMTBhZjI2MzgxNjU1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Drama"
-    },
-    {
-      "rank": "7",
-      "titles": "The Transformers: The Movie",
-      "sales": 4.16,
-      "weekend": 3.1,
-      "links": "https://www.imdb.com/find/?q=The%20Transformers%3A%20The%20Movie",
-      "imageUrls": "",
-      "genre": ""
-    },
-    {
-      "rank": "8",
-      "titles": "Runner",
-      "sales": 11.81,
-      "weekend": 3.01,
-      "links": "https://www.imdb.com/title/tt31349844/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOThmN2YyMzMtN2Y2Zi00MjViLTg2NzQtNGM0ZDU3ZDAyYThhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Comedy, Thriller"
-    },
-    {
-      "rank": "9",
-      "titles": "The Weight",
-      "sales": 2.3,
-      "weekend": 2.3,
-      "links": "https://www.imdb.com/title/tt10794054/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZWU1NWY0MzctYmFiYS00MDU3LWFlNDItZDc5ZGY3Y2JiYTI4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Adventure, Crime, Drama, Thriller"
-    },
-    {
-      "rank": "10",
-      "titles": "Buddy",
-      "sales": 24.86,
-      "weekend": 1.95,
-      "links": "https://www.imdb.com/title/tt37281055/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWRkNWJhNjYtY2FkZC00YjFlLWFjMjUtZGFhMjc5MGYyODE4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Fantasy, Horror, Thriller"
     }
   ]
 }
