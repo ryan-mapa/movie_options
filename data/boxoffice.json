@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Sep 25-27, 2026",
-  "updated": "2026-09-27T17:20:28.947Z",
+  "updated": "2026-09-28T19:53:30.287Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -27,11 +27,11 @@
     {
       "rank": "3",
       "titles": "Heart of the Beast",
-      "sales": 20,
-      "weekend": 20,
+      "sales": 20.04,
+      "weekend": 20.04,
       "links": "https://www.imdb.com/title/tt7526136/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDVlMTRhMjgtMjdmZi00NjJhLWExMmYtODExNWJkZGZjNjdhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Adventure, Drama, Thriller"
+      "genre": "Action, Adventure, Drama"
     },
     {
       "rank": "4",
@@ -45,8 +45,8 @@
     {
       "rank": "5",
       "titles": "Forgotten Island",
-      "sales": 12.8,
-      "weekend": 12.8,
+      "sales": 13.01,
+      "weekend": 13.01,
       "links": "https://www.imdb.com/title/tt36583977/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWJlY2JiNTMtYTAwYy00NGFiLTkwYTEtM2VmNDc4MzM5YmJiXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Animation, Comedy, Family, Fantasy, Music, Mystery"
@@ -54,8 +54,8 @@
     {
       "rank": "6",
       "titles": "Practical Magic 2",
-      "sales": 59.84,
-      "weekend": 5.68,
+      "sales": 59.76,
+      "weekend": 5.6,
       "links": "https://www.imdb.com/title/tt32588798/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWUyY2UyNjgtYTg5MC00MDZmLWE1MzEtZmU2YWE2ZTMzMjUwXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Comedy, Fantasy, Romance"
@@ -72,8 +72,8 @@
     {
       "rank": "8",
       "titles": "The Odyssey",
-      "sales": 616.52,
-      "weekend": 3.7,
+      "sales": 616.62,
+      "weekend": 3.8,
       "links": "https://www.imdb.com/title/tt33764258/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNTcyNmJlZmQtNDUwYy00NDBjLTg1NGQtYTY2Y2UxMWM3NmI1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Fantasy"
