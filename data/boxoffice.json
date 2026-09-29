@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Sep 25-27, 2026",
-  "updated": "2026-09-28T19:53:30.287Z",
+  "updated": "2026-09-29T18:21:50.374Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -9,8 +9,8 @@
     {
       "rank": "1",
       "titles": "Avengers: Endgame",
-      "sales": 884.37,
-      "weekend": 26,
+      "sales": 884.48,
+      "weekend": 26.11,
       "links": "https://www.imdb.com/find/?q=Avengers%3A%20Endgame",
       "imageUrls": "",
       "genre": ""
@@ -18,8 +18,8 @@
     {
       "rank": "2",
       "titles": "Resident Evil",
-      "sales": 103.48,
-      "weekend": 23.3,
+      "sales": 103.19,
+      "weekend": 23.01,
       "links": "https://www.imdb.com/title/tt35538033/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZGVmNzRlZTctNTU2OS00MTQwLWI2ZWQtOGViMjc4ODNlNzVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Horror, Sci-Fi"
@@ -63,8 +63,8 @@
     {
       "rank": "7",
       "titles": "Spider-Man: Brand New Day",
-      "sales": 950.68,
-      "weekend": 4.1,
+      "sales": 950.64,
+      "weekend": 4.05,
       "links": "https://www.imdb.com/title/tt22084616/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Sci-Fi"
@@ -82,7 +82,7 @@
       "rank": "9",
       "titles": "Coyote vs. Acme",
       "sales": 58.39,
-      "weekend": 1.91,
+      "weekend": 1.92,
       "links": "https://www.imdb.com/title/tt1756855/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDg5NDFkNTctZWE2ZC00MDYzLThlYjItZTljZDY3NTcwNjA3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, Animation, Comedy, Family, Fantasy"
@@ -90,8 +90,8 @@
     {
       "rank": "10",
       "titles": "Daniel and the Fiery Furnace",
-      "sales": 6.2,
-      "weekend": 1.51,
+      "sales": 6.23,
+      "weekend": 1.54,
       "links": "https://www.imdb.com/title/tt37542993/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNmY0MmU4ODktNTEzOC00OWFhLTk4NzctMTBhZjI2MzgxNjU1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Drama"
