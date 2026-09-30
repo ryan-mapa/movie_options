@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Sep 25-27, 2026",
-  "updated": "2026-09-29T18:21:50.374Z",
+  "updated": "2026-09-30T18:11:41.615Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -8,10 +8,10 @@
   "movies": [
     {
       "rank": "1",
-      "titles": "Avengers: Endgame",
+      "titles": "Avengers Endgame: Encore",
       "sales": 884.48,
       "weekend": 26.11,
-      "links": "https://www.imdb.com/find/?q=Avengers%3A%20Endgame",
+      "links": "https://www.imdb.com/find/?q=Avengers%20Endgame%3A%20Encore",
       "imageUrls": "",
       "genre": ""
     },
@@ -22,7 +22,7 @@
       "weekend": 23.01,
       "links": "https://www.imdb.com/title/tt35538033/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZGVmNzRlZTctNTU2OS00MTQwLWI2ZWQtOGViMjc4ODNlNzVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Horror, Sci-Fi"
+      "genre": "Horror"
     },
     {
       "rank": "3",
@@ -67,7 +67,7 @@
       "weekend": 4.05,
       "links": "https://www.imdb.com/title/tt22084616/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Adventure, Sci-Fi"
+      "genre": "Action, Adventure"
     },
     {
       "rank": "8",
