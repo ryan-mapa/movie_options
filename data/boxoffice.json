@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Sep 25-27, 2026",
-  "updated": "2026-10-01T18:36:54.207Z",
+  "updated": "2026-10-03T16:50:02.876Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -36,8 +36,8 @@
     {
       "rank": "4",
       "titles": "Primetime",
-      "sales": 19.2,
-      "weekend": 19.2,
+      "sales": 18.83,
+      "weekend": 18.83,
       "links": "https://www.imdb.com/title/tt34206385/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTcyZGI2NWQtOTU3NS00NTEyLTliNDItNTQyNmFkMGZmZGQzXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Biography, Crime, Drama, Thriller"
