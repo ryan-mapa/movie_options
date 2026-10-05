@@ -1,6 +1,6 @@
 {
-  "weekend": "Weekend of Sep 25-27, 2026",
-  "updated": "2026-10-04T17:09:49.561Z",
+  "weekend": "Weekend of Oct 2-4, 2026",
+  "updated": "2026-10-05T21:01:56.370Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -8,18 +8,18 @@
   "movies": [
     {
       "rank": "1",
-      "titles": "Avengers Endgame: Encore",
-      "sales": 884.48,
-      "weekend": 26.11,
-      "links": "https://www.imdb.com/find/?q=Avengers%20Endgame%3A%20Encore",
-      "imageUrls": "",
-      "genre": ""
+      "titles": "Verity",
+      "sales": 32.03,
+      "weekend": 32.03,
+      "links": "https://www.imdb.com/title/tt32261958/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZmE0OWRiNzktY2MwMy00YzQ5LWFkMzctNjI1ZWQ1NTRiZGM3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Crime, Drama, Mystery, Thriller"
     },
     {
       "rank": "2",
       "titles": "Resident Evil",
-      "sales": 103.19,
-      "weekend": 23.01,
+      "sales": 125.01,
+      "weekend": 12.62,
       "links": "https://www.imdb.com/title/tt35538033/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOGZjZWI1NTItOGUwZC00YWZkLWIxZWEtNzE2ZTIxODdjNmZmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Horror"
@@ -27,8 +27,8 @@
     {
       "rank": "3",
       "titles": "Heart of the Beast",
-      "sales": 20.04,
-      "weekend": 20.04,
+      "sales": 38.28,
+      "weekend": 10.88,
       "links": "https://www.imdb.com/title/tt7526136/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDVlMTRhMjgtMjdmZi00NjJhLWExMmYtODExNWJkZGZjNjdhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Drama, Thriller"
@@ -36,65 +36,65 @@
     {
       "rank": "4",
       "titles": "Primetime",
-      "sales": 18.83,
-      "weekend": 18.83,
+      "sales": 34.09,
+      "weekend": 8,
       "links": "https://www.imdb.com/title/tt34206385/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTcyZGI2NWQtOTU3NS00NTEyLTliNDItNTQyNmFkMGZmZGQzXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Biography, Crime, Drama, Thriller"
     },
     {
       "rank": "5",
+      "titles": "Digger",
+      "sales": 8,
+      "weekend": 8,
+      "links": "https://www.imdb.com/title/tt31450459/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BN2E0YTg1M2YtOGQyYi00NDFkLTk3NzUtYmEyNTZhYThhZDQ0XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Comedy, Drama"
+    },
+    {
+      "rank": "6",
       "titles": "Forgotten Island",
-      "sales": 13.01,
-      "weekend": 13.01,
+      "sales": 23.63,
+      "weekend": 7.2,
       "links": "https://www.imdb.com/title/tt36583977/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWJlY2JiNTMtYTAwYy00NGFiLTkwYTEtM2VmNDc4MzM5YmJiXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Animation, Comedy, Family, Fantasy, Music, Mystery"
     },
     {
-      "rank": "6",
+      "rank": "7",
+      "titles": "Avengers Endgame: Encore",
+      "sales": 894.67,
+      "weekend": 4.47,
+      "links": "https://www.imdb.com/find/?q=Avengers%20Endgame%3A%20Encore",
+      "imageUrls": "",
+      "genre": ""
+    },
+    {
+      "rank": "8",
+      "titles": "Drishyam: The Conclusion",
+      "sales": 2.74,
+      "weekend": 2.74,
+      "links": "https://www.imdb.com/title/tt27050858/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMzJlNzY1MTQtM2VmMy00OWQ4LTk0ZDQtODZiODUwMWZkZWYyXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Crime, Drama, Mystery, Thriller"
+    },
+    {
+      "rank": "9",
       "titles": "Practical Magic 2",
-      "sales": 59.76,
-      "weekend": 5.6,
+      "sales": 64.7,
+      "weekend": 2.66,
       "links": "https://www.imdb.com/title/tt32588798/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWUyY2UyNjgtYTg5MC00MDZmLWE1MzEtZmU2YWE2ZTMzMjUwXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Comedy, Fantasy, Romance"
     },
     {
-      "rank": "7",
+      "rank": "10",
       "titles": "Spider-Man: Brand New Day",
-      "sales": 950.64,
-      "weekend": 4.05,
+      "sales": 954.53,
+      "weekend": 2.5,
       "links": "https://www.imdb.com/title/tt22084616/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure"
-    },
-    {
-      "rank": "8",
-      "titles": "The Odyssey",
-      "sales": 616.62,
-      "weekend": 3.8,
-      "links": "https://www.imdb.com/title/tt33764258/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BNTcyNmJlZmQtNDUwYy00NDBjLTg1NGQtYTY2Y2UxMWM3NmI1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Adventure, Fantasy"
-    },
-    {
-      "rank": "9",
-      "titles": "Coyote vs. Acme",
-      "sales": 58.39,
-      "weekend": 1.92,
-      "links": "https://www.imdb.com/title/tt1756855/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDg5NDFkNTctZWE2ZC00MDYzLThlYjItZTljZDY3NTcwNjA3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Adventure, Animation, Comedy, Family, Fantasy"
-    },
-    {
-      "rank": "10",
-      "titles": "Daniel and the Fiery Furnace",
-      "sales": 6.23,
-      "weekend": 1.54,
-      "links": "https://www.imdb.com/title/tt37542993/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BNmY0MmU4ODktNTEzOC00OWFhLTk4NzctMTBhZjI2MzgxNjU1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Drama"
     }
   ]
 }
