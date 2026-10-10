@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Oct 2-4, 2026",
-  "updated": "2026-10-06T18:40:56.107Z",
+  "updated": "2026-10-10T17:30:44.487Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -27,7 +27,7 @@
     {
       "rank": "3",
       "titles": "Heart of the Beast",
-      "sales": 38.28,
+      "sales": 38.29,
       "weekend": 10.88,
       "links": "https://www.imdb.com/title/tt7526136/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDVlMTRhMjgtMjdmZi00NjJhLWExMmYtODExNWJkZGZjNjdhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
@@ -45,8 +45,8 @@
     {
       "rank": "5",
       "titles": "Primetime",
-      "sales": 34.09,
-      "weekend": 8,
+      "sales": 33.83,
+      "weekend": 7.75,
       "links": "https://www.imdb.com/title/tt34206385/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTcyZGI2NWQtOTU3NS00NTEyLTliNDItNTQyNmFkMGZmZGQzXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Biography, Crime, Drama, Thriller"
