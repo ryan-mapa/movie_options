@@ -1,6 +1,6 @@
 {
-  "weekend": "Weekend of Oct 2-4, 2026",
-  "updated": "2026-10-10T17:30:44.487Z",
+  "weekend": "Weekend of Oct 9-11, 2026",
+  "updated": "2026-10-11T17:50:02.320Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -8,93 +8,93 @@
   "movies": [
     {
       "rank": "1",
+      "titles": "Other Mommy",
+      "sales": 27.5,
+      "weekend": 27.5,
+      "links": "https://www.imdb.com/title/tt36586020/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOGUyODYyYTctMmY0Mi00ZWIwLThjYWItZDJmODY4NGU1YjY1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Horror, Thriller"
+    },
+    {
+      "rank": "2",
       "titles": "Verity",
-      "sales": 32.03,
-      "weekend": 32.03,
+      "sales": 53.86,
+      "weekend": 11.48,
       "links": "https://www.imdb.com/title/tt32261958/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZmE0OWRiNzktY2MwMy00YzQ5LWFkMzctNjI1ZWQ1NTRiZGM3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Crime, Drama, Mystery, Thriller"
     },
     {
-      "rank": "2",
+      "rank": "3",
       "titles": "Resident Evil",
-      "sales": 125.01,
-      "weekend": 12.62,
+      "sales": 138.53,
+      "weekend": 8.35,
       "links": "https://www.imdb.com/title/tt35538033/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOGZjZWI1NTItOGUwZC00YWZkLWIxZWEtNzE2ZTIxODdjNmZmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Horror"
     },
     {
-      "rank": "3",
+      "rank": "4",
       "titles": "Heart of the Beast",
-      "sales": 38.29,
-      "weekend": 10.88,
+      "sales": 49.66,
+      "weekend": 7.1,
       "links": "https://www.imdb.com/title/tt7526136/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDVlMTRhMjgtMjdmZi00NjJhLWExMmYtODExNWJkZGZjNjdhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Drama, Thriller"
     },
     {
-      "rank": "4",
-      "titles": "Digger",
-      "sales": 8,
-      "weekend": 8,
-      "links": "https://www.imdb.com/title/tt31450459/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BN2E0YTg1M2YtOGQyYi00NDFkLTk3NzUtYmEyNTZhYThhZDQ0XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Comedy, Drama"
-    },
-    {
       "rank": "5",
-      "titles": "Primetime",
-      "sales": 33.83,
-      "weekend": 7.75,
-      "links": "https://www.imdb.com/title/tt34206385/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTcyZGI2NWQtOTU3NS00NTEyLTliNDItNTQyNmFkMGZmZGQzXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Biography, Crime, Drama, Thriller"
+      "titles": "The Social Reckoning",
+      "sales": 5.5,
+      "weekend": 5.5,
+      "links": "https://www.imdb.com/title/tt37510326/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BYjdlZTgzZDUtMmVjYy00M2EyLWFlNGMtNjVhYjM2ODNmZjEzXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Biography, Drama, Thriller"
     },
     {
       "rank": "6",
       "titles": "Forgotten Island",
-      "sales": 23.63,
-      "weekend": 7.2,
+      "sales": 30.27,
+      "weekend": 4.5,
       "links": "https://www.imdb.com/title/tt36583977/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWJlY2JiNTMtYTAwYy00NGFiLTkwYTEtM2VmNDc4MzM5YmJiXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Animation, Comedy, Family, Fantasy, Music, Mystery"
     },
     {
       "rank": "7",
-      "titles": "Avengers Endgame: Encore",
-      "sales": 894.67,
-      "weekend": 4.47,
-      "links": "https://www.imdb.com/find/?q=Avengers%20Endgame%3A%20Encore",
-      "imageUrls": "",
-      "genre": ""
+      "titles": "Primetime",
+      "sales": 41.47,
+      "weekend": 4.01,
+      "links": "https://www.imdb.com/title/tt34206385/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTcyZGI2NWQtOTU3NS00NTEyLTliNDItNTQyNmFkMGZmZGQzXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Biography, Crime, Drama, Thriller"
     },
     {
       "rank": "8",
-      "titles": "Practical Magic 2",
-      "sales": 64.83,
-      "weekend": 2.79,
-      "links": "https://www.imdb.com/title/tt32588798/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWUyY2UyNjgtYTg5MC00MDZmLWE1MzEtZmU2YWE2ZTMzMjUwXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Comedy, Fantasy, Romance"
+      "titles": "Digger",
+      "sales": 14.43,
+      "weekend": 3.2,
+      "links": "https://www.imdb.com/title/tt31450459/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BN2E0YTg1M2YtOGQyYi00NDFkLTk3NzUtYmEyNTZhYThhZDQ0XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Comedy, Drama"
     },
     {
       "rank": "9",
-      "titles": "Drishyam: The Conclusion",
-      "sales": 2.74,
-      "weekend": 2.74,
-      "links": "https://www.imdb.com/title/tt27050858/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMzJlNzY1MTQtM2VmMy00OWQ4LTk0ZDQtODZiODUwMWZkZWYyXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Crime, Drama, Mystery, Thriller"
+      "titles": "Angel and the Badman",
+      "sales": 2.06,
+      "weekend": 2.06,
+      "links": "https://www.imdb.com/title/tt39850240/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZmJhNjU3ODUtOTI1YS00M2RlLWJiZDEtZGU0NjRhYTBiNWNhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Action, Adventure, Romance, Western"
     },
     {
       "rank": "10",
-      "titles": "Spider-Man: Brand New Day",
-      "sales": 954.53,
-      "weekend": 2.5,
-      "links": "https://www.imdb.com/title/tt22084616/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOWNjYWM3NWItOGE0ZS00MWRjLThiZWEtYjc4ZmNmMmU5ZTVmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Adventure"
+      "titles": "The Odyssey",
+      "sales": 622.97,
+      "weekend": 2,
+      "links": "https://www.imdb.com/title/tt33764258/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BNTcyNmJlZmQtNDUwYy00NDBjLTg1NGQtYTY2Y2UxMWM3NmI1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Action, Adventure, Fantasy"
     }
   ]
 }
