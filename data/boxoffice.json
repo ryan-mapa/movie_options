@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Oct 9-11, 2026",
-  "updated": "2026-10-11T17:50:02.320Z",
+  "updated": "2026-10-12T21:27:17.976Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -9,8 +9,8 @@
     {
       "rank": "1",
       "titles": "Other Mommy",
-      "sales": 27.5,
-      "weekend": 27.5,
+      "sales": 27.81,
+      "weekend": 27.81,
       "links": "https://www.imdb.com/title/tt36586020/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOGUyODYyYTctMmY0Mi00ZWIwLThjYWItZDJmODY4NGU1YjY1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Horror, Thriller"
@@ -18,8 +18,8 @@
     {
       "rank": "2",
       "titles": "Verity",
-      "sales": 53.86,
-      "weekend": 11.48,
+      "sales": 54.38,
+      "weekend": 12.01,
       "links": "https://www.imdb.com/title/tt32261958/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZmE0OWRiNzktY2MwMy00YzQ5LWFkMzctNjI1ZWQ1NTRiZGM3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Crime, Drama, Mystery, Thriller"
@@ -27,8 +27,8 @@
     {
       "rank": "3",
       "titles": "Resident Evil",
-      "sales": 138.53,
-      "weekend": 8.35,
+      "sales": 138.74,
+      "weekend": 8.56,
       "links": "https://www.imdb.com/title/tt35538033/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOGZjZWI1NTItOGUwZC00YWZkLWIxZWEtNzE2ZTIxODdjNmZmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Horror"
@@ -36,8 +36,8 @@
     {
       "rank": "4",
       "titles": "Heart of the Beast",
-      "sales": 49.66,
-      "weekend": 7.1,
+      "sales": 50,
+      "weekend": 7.44,
       "links": "https://www.imdb.com/title/tt7526136/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDVlMTRhMjgtMjdmZi00NjJhLWExMmYtODExNWJkZGZjNjdhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Drama, Thriller"
@@ -45,8 +45,8 @@
     {
       "rank": "5",
       "titles": "The Social Reckoning",
-      "sales": 5.5,
-      "weekend": 5.5,
+      "sales": 5.02,
+      "weekend": 5.02,
       "links": "https://www.imdb.com/title/tt37510326/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BYjdlZTgzZDUtMmVjYy00M2EyLWFlNGMtNjVhYjM2ODNmZjEzXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Biography, Drama, Thriller"
@@ -54,8 +54,8 @@
     {
       "rank": "6",
       "titles": "Forgotten Island",
-      "sales": 30.27,
-      "weekend": 4.5,
+      "sales": 30.48,
+      "weekend": 4.7,
       "links": "https://www.imdb.com/title/tt36583977/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWJlY2JiNTMtYTAwYy00NGFiLTkwYTEtM2VmNDc4MzM5YmJiXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Animation, Comedy, Family, Fantasy, Music, Mystery"
@@ -80,21 +80,21 @@
     },
     {
       "rank": "9",
-      "titles": "Angel and the Badman",
-      "sales": 2.06,
-      "weekend": 2.06,
-      "links": "https://www.imdb.com/title/tt39850240/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZmJhNjU3ODUtOTI1YS00M2RlLWJiZDEtZGU0NjRhYTBiNWNhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, Adventure, Romance, Western"
-    },
-    {
-      "rank": "10",
       "titles": "The Odyssey",
-      "sales": 622.97,
-      "weekend": 2,
+      "sales": 623.12,
+      "weekend": 2.15,
       "links": "https://www.imdb.com/title/tt33764258/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNTcyNmJlZmQtNDUwYy00NDBjLTg1NGQtYTY2Y2UxMWM3NmI1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, Adventure, Fantasy"
+    },
+    {
+      "rank": "10",
+      "titles": "Angel and the Badman",
+      "sales": 2.12,
+      "weekend": 2.12,
+      "links": "https://www.imdb.com/title/tt39850240/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BZmJhNjU3ODUtOTI1YS00M2RlLWJiZDEtZGU0NjRhYTBiNWNhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Action, Adventure, Romance, Western"
     }
   ]
 }
