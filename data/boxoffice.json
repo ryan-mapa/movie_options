@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Oct 16-18, 2026",
-  "updated": "2026-10-19T18:52:56.837Z",
+  "updated": "2026-10-20T17:36:44.821Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -9,8 +9,8 @@
     {
       "rank": "1",
       "titles": "Street Fighter",
-      "sales": 31,
-      "weekend": 31,
+      "sales": 30.78,
+      "weekend": 30.78,
       "links": "https://www.imdb.com/title/tt27419420/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BYjhlN2EyNGUtY2U4YS00ZTQ3LTg0NTgtNGIxZmVhMDlmMjIyXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action"
@@ -27,8 +27,8 @@
     {
       "rank": "3",
       "titles": "Other Mommy",
-      "sales": 44.85,
-      "weekend": 8.35,
+      "sales": 44.71,
+      "weekend": 8.2,
       "links": "https://www.imdb.com/title/tt36586020/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOGUyODYyYTctMmY0Mi00ZWIwLThjYWItZDJmODY4NGU1YjY1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Horror, &middot;, Thriller"
@@ -36,8 +36,8 @@
     {
       "rank": "4",
       "titles": "Whalefall",
-      "sales": 8,
-      "weekend": 8,
+      "sales": 7.84,
+      "weekend": 7.84,
       "links": "https://www.imdb.com/title/tt28535715/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOWJkMjA4M2MtODRkMi00NzI4LTk4MDQtNDZlODdhNDdkYmM3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, &middot;, Drama, &middot;, Thriller"
@@ -45,8 +45,8 @@
     {
       "rank": "5",
       "titles": "Sense and Sensibility",
-      "sales": 7.25,
-      "weekend": 7.25,
+      "sales": 7.2,
+      "weekend": 7.2,
       "links": "https://www.imdb.com/title/tt13609648/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNzNmM2E0OWItZWU2MC00M2I3LWEyZTQtYWIyYmZhOGEyOTY1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Drama, &middot;, Romance"
@@ -54,8 +54,8 @@
     {
       "rank": "6",
       "titles": "Verity",
-      "sales": 66.09,
-      "weekend": 6.21,
+      "sales": 65.93,
+      "weekend": 6.05,
       "links": "https://www.imdb.com/title/tt32261958/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZmE0OWRiNzktY2MwMy00YzQ5LWFkMzctNjI1ZWQ1NTRiZGM3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Crime, &middot;, Drama, &middot;, Mystery, &middot;, Thriller"
@@ -72,8 +72,8 @@
     {
       "rank": "8",
       "titles": "Heart of the Beast",
-      "sales": 58.32,
-      "weekend": 4.83,
+      "sales": 58.23,
+      "weekend": 4.74,
       "links": "https://www.imdb.com/title/tt7526136/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDVlMTRhMjgtMjdmZi00NjJhLWExMmYtODExNWJkZGZjNjdhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, &middot;, Adventure, &middot;, Drama, &middot;, Thriller"
@@ -90,8 +90,8 @@
     {
       "rank": "10",
       "titles": "Forgotten Island",
-      "sales": 35.11,
-      "weekend": 2.25,
+      "sales": 35.21,
+      "weekend": 2.35,
       "links": "https://www.imdb.com/title/tt36583977/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWJlY2JiNTMtYTAwYy00NGFiLTkwYTEtM2VmNDc4MzM5YmJiXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, &middot;, Adventure, &middot;, Animation, &middot;, Comedy, &middot;, Family, &middot;, Fantasy, &middot;, Music, &middot;, Mystery"
