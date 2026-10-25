@@ -1,6 +1,6 @@
 {
-  "weekend": "Weekend of Oct 16-18, 2026",
-  "updated": "2026-10-22T17:43:08.877Z",
+  "weekend": "Weekend of Oct 23-25, 2026",
+  "updated": "2026-10-25T16:53:13.621Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -8,93 +8,93 @@
   "movies": [
     {
       "rank": "1",
-      "titles": "Street Fighter",
-      "sales": 30.78,
-      "weekend": 30.78,
-      "links": "https://www.imdb.com/title/tt27419420/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BYjhlN2EyNGUtY2U4YS00ZTQ3LTg0NTgtNGIxZmVhMDlmMjIyXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action"
+      "titles": "Clayface",
+      "sales": 24,
+      "weekend": 24,
+      "links": "https://www.imdb.com/title/tt34890576/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMjNlMjM4NTAtYjE5YS00ZGYyLWEyMTYtNjFlMmIxZDEzYjhhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Horror, &middot;, Sci-Fi, &middot;, Thriller"
     },
     {
       "rank": "2",
       "titles": "You Can See Everything",
-      "sales": 15.6,
-      "weekend": 15.6,
+      "sales": 45.15,
+      "weekend": 19.5,
       "links": "https://www.imdb.com/title/tt45368240/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDkwNGRiNjYtZTQ4MC00MWFhLWI3MjYtNzk1MDY2ZTNiY2Q4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Biography, &middot;, Comedy, &middot;, Crime, &middot;, Documentary"
     },
     {
       "rank": "3",
+      "titles": "Wildwood",
+      "sales": 11,
+      "weekend": 11,
+      "links": "https://www.imdb.com/title/tt2056785/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BN2JjOGQ1OGMtZmUwYS00YmQ2LTllNzQtZjU2YjY1NzM2NzJjXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Adventure, &middot;, Animation, &middot;, Fantasy"
+    },
+    {
+      "rank": "4",
+      "titles": "Street Fighter",
+      "sales": 46.94,
+      "weekend": 8.6,
+      "links": "https://www.imdb.com/title/tt27419420/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BYjhlN2EyNGUtY2U4YS00ZTQ3LTg0NTgtNGIxZmVhMDlmMjIyXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Action"
+    },
+    {
+      "rank": "5",
+      "titles": "Wicker",
+      "sales": 5.75,
+      "weekend": 5.75,
+      "links": "https://www.imdb.com/title/tt29611136/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BODliMTEzMTUtOGFlZS00NTgxLThjODEtMzcwNTE1OWE5Mzg2XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Comedy, &middot;, Drama, &middot;, Fantasy, &middot;, History, &middot;, Romance, &middot;, Sci-Fi"
+    },
+    {
+      "rank": "6",
       "titles": "Other Mommy",
-      "sales": 44.71,
-      "weekend": 8.2,
+      "sales": 51.53,
+      "weekend": 3.85,
       "links": "https://www.imdb.com/title/tt36586020/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOGUyODYyYTctMmY0Mi00ZWIwLThjYWItZDJmODY4NGU1YjY1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Horror, &middot;, Thriller"
     },
     {
-      "rank": "4",
-      "titles": "Whalefall",
-      "sales": 7.84,
-      "weekend": 7.84,
-      "links": "https://www.imdb.com/title/tt28535715/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOWJkMjA4M2MtODRkMi00NzI4LTk4MDQtNDZlODdhNDdkYmM3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Adventure, &middot;, Drama, &middot;, Thriller"
-    },
-    {
-      "rank": "5",
+      "rank": "7",
       "titles": "Sense and Sensibility",
-      "sales": 7.2,
-      "weekend": 7.2,
+      "sales": 13.68,
+      "weekend": 3.4,
       "links": "https://www.imdb.com/title/tt13609648/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNzNmM2E0OWItZWU2MC00M2I3LWEyZTQtYWIyYmZhOGEyOTY1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Drama, &middot;, Romance"
     },
     {
-      "rank": "6",
+      "rank": "8",
+      "titles": "Whalefall",
+      "sales": 14.07,
+      "weekend": 3.2,
+      "links": "https://www.imdb.com/title/tt28535715/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOWJkMjA4M2MtODRkMi00NzI4LTk4MDQtNDZlODdhNDdkYmM3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Adventure, &middot;, Drama, &middot;, Thriller"
+    },
+    {
+      "rank": "9",
       "titles": "Verity",
-      "sales": 65.93,
-      "weekend": 6.05,
+      "sales": 71.53,
+      "weekend": 3.06,
       "links": "https://www.imdb.com/title/tt32261958/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZmE0OWRiNzktY2MwMy00YzQ5LWFkMzctNjI1ZWQ1NTRiZGM3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Crime, &middot;, Drama, &middot;, Mystery, &middot;, Thriller"
     },
     {
-      "rank": "7",
+      "rank": "10",
       "titles": "Resident Evil",
-      "sales": 148.46,
-      "weekend": 5.5,
+      "sales": 153.68,
+      "weekend": 3,
       "links": "https://www.imdb.com/title/tt35538033/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOGZjZWI1NTItOGUwZC00YWZkLWIxZWEtNzE2ZTIxODdjNmZmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Horror"
-    },
-    {
-      "rank": "8",
-      "titles": "Heart of the Beast",
-      "sales": 58.23,
-      "weekend": 4.74,
-      "links": "https://www.imdb.com/title/tt7526136/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDVlMTRhMjgtMjdmZi00NjJhLWExMmYtODExNWJkZGZjNjdhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, &middot;, Adventure, &middot;, Drama, &middot;, Thriller"
-    },
-    {
-      "rank": "9",
-      "titles": "Jailer 2",
-      "sales": 5.09,
-      "weekend": 3.09,
-      "links": "https://www.imdb.com/title/tt33318732/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BYmJiYzc1ODctZjQzZS00NzEzLWI0NDEtZGVkNjI4YzEzNGRjXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, &middot;, Comedy, &middot;, Crime, &middot;, Drama, &middot;, Thriller"
-    },
-    {
-      "rank": "10",
-      "titles": "Forgotten Island",
-      "sales": 35.21,
-      "weekend": 2.35,
-      "links": "https://www.imdb.com/title/tt36583977/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMWJlY2JiNTMtYTAwYy00NGFiLTkwYTEtM2VmNDc4MzM5YmJiXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, &middot;, Adventure, &middot;, Animation, &middot;, Comedy, &middot;, Family, &middot;, Fantasy, &middot;, Music, &middot;, Mystery"
     }
   ]
 }
