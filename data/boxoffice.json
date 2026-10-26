@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Oct 23-25, 2026",
-  "updated": "2026-10-25T16:53:13.621Z",
+  "updated": "2026-10-26T18:55:17.362Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -27,8 +27,8 @@
     {
       "rank": "3",
       "titles": "Wildwood",
-      "sales": 11,
-      "weekend": 11,
+      "sales": 12.27,
+      "weekend": 12.27,
       "links": "https://www.imdb.com/title/tt2056785/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BN2JjOGQ1OGMtZmUwYS00YmQ2LTllNzQtZjU2YjY1NzM2NzJjXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, &middot;, Animation, &middot;, Fantasy"
@@ -36,8 +36,8 @@
     {
       "rank": "4",
       "titles": "Street Fighter",
-      "sales": 46.94,
-      "weekend": 8.6,
+      "sales": 46.93,
+      "weekend": 8.59,
       "links": "https://www.imdb.com/title/tt27419420/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BYjhlN2EyNGUtY2U4YS00ZTQ3LTg0NTgtNGIxZmVhMDlmMjIyXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action"
