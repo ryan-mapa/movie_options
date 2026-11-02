@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Oct 30 - Nov 1, 2026",
-  "updated": "2026-11-01T18:10:32.806Z",
+  "updated": "2026-11-02T21:59:14.187Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -9,8 +9,8 @@
     {
       "rank": "1",
       "titles": "You Can See Everything",
-      "sales": 63.88,
-      "weekend": 10.6,
+      "sales": 64.73,
+      "weekend": 11.45,
       "links": "https://www.imdb.com/title/tt45368240/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDkwNGRiNjYtZTQ4MC00MWFhLWI3MjYtNzk1MDY2ZTNiY2Q4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Biography, &middot;, Comedy, &middot;, Crime, &middot;, Documentary"
@@ -18,8 +18,8 @@
     {
       "rank": "2",
       "titles": "Clayface",
-      "sales": 44.06,
-      "weekend": 10.4,
+      "sales": 44.66,
+      "weekend": 11,
       "links": "https://www.imdb.com/title/tt34890576/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMjNlMjM4NTAtYjE5YS00ZGYyLWEyMTYtNjFlMmIxZDEzYjhhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Horror, &middot;, Sci-Fi, &middot;, Thriller"
@@ -27,8 +27,8 @@
     {
       "rank": "3",
       "titles": "Wildwood",
-      "sales": 25.9,
-      "weekend": 7.5,
+      "sales": 27.36,
+      "weekend": 8.95,
       "links": "https://www.imdb.com/title/tt2056785/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BN2JjOGQ1OGMtZmUwYS00YmQ2LTllNzQtZjU2YjY1NzM2NzJjXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, &middot;, Animation, &middot;, Fantasy"
@@ -36,8 +36,8 @@
     {
       "rank": "4",
       "titles": "Wicker",
-      "sales": 13.26,
-      "weekend": 4.13,
+      "sales": 13.5,
+      "weekend": 4.36,
       "links": "https://www.imdb.com/title/tt29611136/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BODliMTEzMTUtOGFlZS00NTgxLThjODEtMzcwNTE1OWE5Mzg2XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Comedy, &middot;, Drama, &middot;, Fantasy, &middot;, Romance"
@@ -45,8 +45,8 @@
     {
       "rank": "5",
       "titles": "Street Fighter",
-      "sales": 53.01,
-      "weekend": 3.2,
+      "sales": 53.47,
+      "weekend": 3.66,
       "links": "https://www.imdb.com/title/tt27419420/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BYjhlN2EyNGUtY2U4YS00ZTQ3LTg0NTgtNGIxZmVhMDlmMjIyXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action"
@@ -62,27 +62,27 @@
     },
     {
       "rank": "7",
-      "titles": "Resident Evil",
-      "sales": 157.4,
-      "weekend": 2.53,
-      "links": "https://www.imdb.com/title/tt35538033/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOGZjZWI1NTItOGUwZC00YWZkLWIxZWEtNzE2ZTIxODdjNmZmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Horror"
-    },
-    {
-      "rank": "8",
       "titles": "Other Mommy",
-      "sales": 55.63,
-      "weekend": 2.5,
+      "sales": 55.72,
+      "weekend": 2.6,
       "links": "https://www.imdb.com/title/tt36586020/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOGUyODYyYTctMmY0Mi00ZWIwLThjYWItZDJmODY4NGU1YjY1XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Horror, &middot;, Thriller"
     },
     {
+      "rank": "8",
+      "titles": "Resident Evil",
+      "sales": 157.42,
+      "weekend": 2.55,
+      "links": "https://www.imdb.com/title/tt35538033/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BOGZjZWI1NTItOGUwZC00YWZkLWIxZWEtNzE2ZTIxODdjNmZmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Horror"
+    },
+    {
       "rank": "9",
       "titles": "The Only Living Pickpocket in New York",
-      "sales": 1.97,
-      "weekend": 1.77,
+      "sales": 2.08,
+      "weekend": 1.88,
       "links": "https://www.imdb.com/title/tt36482679/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BODc3NTVjOGMtMzVjYy00NzQ0LTg3MmYtODg3NzljMzNlOTJmXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Crime, &middot;, Drama, &middot;, Thriller"
@@ -90,8 +90,8 @@
     {
       "rank": "10",
       "titles": "Heart of the Beast",
-      "sales": 65.11,
-      "weekend": 1.62,
+      "sales": 65.15,
+      "weekend": 1.66,
       "links": "https://www.imdb.com/title/tt7526136/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDVlMTRhMjgtMjdmZi00NjJhLWExMmYtODExNWJkZGZjNjdhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, &middot;, Adventure, &middot;, Drama, &middot;, Thriller"
