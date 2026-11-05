@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Oct 30 - Nov 1, 2026",
-  "updated": "2026-11-03T19:52:42.777Z",
+  "updated": "2026-11-05T20:22:40.715Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -27,8 +27,8 @@
     {
       "rank": "3",
       "titles": "Wildwood",
-      "sales": 27.36,
-      "weekend": 8.95,
+      "sales": 27.3,
+      "weekend": 8.92,
       "links": "https://www.imdb.com/title/tt2056785/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BN2JjOGQ1OGMtZmUwYS00YmQ2LTllNzQtZjU2YjY1NzM2NzJjXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, &middot;, Animation, &middot;, Fantasy"
