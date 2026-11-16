@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Nov 13-15, 2026",
-  "updated": "2026-11-15T19:10:21.316Z",
+  "updated": "2026-11-16T22:36:49.207Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -9,8 +9,8 @@
     {
       "rank": "1",
       "titles": "Ebenezer",
-      "sales": 19,
-      "weekend": 19,
+      "sales": 19.01,
+      "weekend": 19.01,
       "links": "https://www.imdb.com/title/tt38773219/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BY2Y0NWM2N2EtMjdkMS00NTc0LTg4NDctZmUyYTA4YWZlY2EwXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, &middot;, Comedy, &middot;, Drama, &middot;, Fantasy, &middot;, Thriller"
@@ -18,8 +18,8 @@
     {
       "rank": "2",
       "titles": "The Cat in the Hat",
-      "sales": 38.17,
-      "weekend": 11.4,
+      "sales": 38.07,
+      "weekend": 11.3,
       "links": "https://www.imdb.com/title/tt2321555/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZmJhNzk4OGMtOTlmNC00ODAxLWFkYjYtY2RhYWVmNDg5YmViXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, &middot;, Animation, &middot;, Comedy, &middot;, Family, &middot;, Fantasy"
@@ -27,8 +27,8 @@
     {
       "rank": "3",
       "titles": "Godzilla Minus Zero",
-      "sales": 48.88,
-      "weekend": 8.31,
+      "sales": 49.08,
+      "weekend": 8.51,
       "links": "https://www.imdb.com/title/tt34384661/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BYzY2OWFhMTgtODJhMi00NDIyLWIzNTQtYjc4MjE4YTBjYzllXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, &middot;, Drama, &middot;, Horror, &middot;, Sci-Fi, &middot;, Thriller"
@@ -36,8 +36,8 @@
     {
       "rank": "4",
       "titles": "Ramayana: Rise of a Legend",
-      "sales": 24.13,
-      "weekend": 5.5,
+      "sales": 24.43,
+      "weekend": 5.8,
       "links": "https://www.imdb.com/find/?q=Ramayana%3A%20Rise%20of%20a%20Legend",
       "imageUrls": "",
       "genre": ""
@@ -53,27 +53,27 @@
     },
     {
       "rank": "6",
+      "titles": "How to Rob a Bank",
+      "sales": 5.19,
+      "weekend": 5.19,
+      "links": "https://www.imdb.com/title/tt35866986/",
+      "imageUrls": "https://m.media-amazon.com/images/M/MV5BYzMzZGQ1MDQtOWI1Ny00YTE3LTg0ZmQtZTM0MTcxOTZlZjY2XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "genre": "Action, &middot;, Comedy, &middot;, Crime, &middot;, Drama, &middot;, Thriller"
+    },
+    {
+      "rank": "7",
       "titles": "Ghost Soldier",
-      "sales": 8.31,
-      "weekend": 5.2,
+      "sales": 8.21,
+      "weekend": 5.1,
       "links": "https://www.imdb.com/title/tt38686316/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZDM4MzMxZGUtZjE3Yi00YzE3LTlkNDktNWQ1MmEwMmZiZDEyXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, &middot;, Thriller"
     },
     {
-      "rank": "7",
-      "titles": "How to Rob a Bank",
-      "sales": 5.18,
-      "weekend": 5.18,
-      "links": "https://www.imdb.com/title/tt35866986/",
-      "imageUrls": "https://m.media-amazon.com/images/M/MV5BMTk5MTAxYTItZjUzMC00NDk3LWI0OWMtZjM0YTU3ODUyMDk3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
-      "genre": "Action, &middot;, Comedy, &middot;, Crime, &middot;, Drama, &middot;, Thriller"
-    },
-    {
       "rank": "8",
       "titles": "Wild Horse Nine",
-      "sales": 13.32,
-      "weekend": 4.6,
+      "sales": 13.25,
+      "weekend": 4.53,
       "links": "https://www.imdb.com/title/tt15799564/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOTlkOGFlYWYtN2VlNC00NjNhLWIxYmMtNDVhZTQ4YmQ4ZTdiXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, &middot;, Comedy, &middot;, Crime, &middot;, Drama, &middot;, Thriller"
@@ -81,8 +81,8 @@
     {
       "rank": "9",
       "titles": "Wildwood",
-      "sales": 48.31,
-      "weekend": 4.37,
+      "sales": 48.36,
+      "weekend": 4.43,
       "links": "https://www.imdb.com/title/tt2056785/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BN2JjOGQ1OGMtZmUwYS00YmQ2LTllNzQtZjU2YjY1NzM2NzJjXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, &middot;, Animation, &middot;, Fantasy"
@@ -90,8 +90,8 @@
     {
       "rank": "10",
       "titles": "Clayface",
-      "sales": 63.63,
-      "weekend": 3.73,
+      "sales": 63.61,
+      "weekend": 3.7,
       "links": "https://www.imdb.com/title/tt34890576/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMjNlMjM4NTAtYjE5YS00ZGYyLWEyMTYtNjFlMmIxZDEzYjhhXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Horror, &middot;, Sci-Fi, &middot;, Thriller"
