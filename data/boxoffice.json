@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Nov 13-15, 2026",
-  "updated": "2026-11-18T20:57:28.057Z",
+  "updated": "2026-11-20T20:49:49.238Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -27,8 +27,8 @@
     {
       "rank": "3",
       "titles": "Godzilla Minus Zero",
-      "sales": 49.08,
-      "weekend": 8.51,
+      "sales": 49.1,
+      "weekend": 8.53,
       "links": "https://www.imdb.com/title/tt34384661/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BYzY2OWFhMTgtODJhMi00NDIyLWIzNTQtYjc4MjE4YTBjYzllXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, &middot;, Drama, &middot;, Horror, &middot;, Sci-Fi, &middot;, Thriller"
@@ -45,8 +45,8 @@
     {
       "rank": "5",
       "titles": "You Can See Everything",
-      "sales": 89.01,
-      "weekend": 5.47,
+      "sales": 88.9,
+      "weekend": 5.36,
       "links": "https://www.imdb.com/title/tt45368240/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BMDkwNGRiNjYtZTQ4MC00MWFhLWI3MjYtNzk1MDY2ZTNiY2Q4XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Biography, &middot;, Comedy, &middot;, Crime, &middot;, Documentary"
