@@ -1,6 +1,6 @@
 {
   "weekend": "Weekend of Nov 20-22, 2026",
-  "updated": "2026-11-22T20:01:41.472Z",
+  "updated": "2026-11-24T00:27:48.939Z",
   "sources": {
     "figures": "https://www.the-numbers.com/box-office-chart/weekend/",
     "artwork": "https://www.boxofficemojo.com/"
@@ -9,8 +9,8 @@
     {
       "rank": "1",
       "titles": "The Hunger Games: Sunrise on the Reaping",
-      "sales": 120,
-      "weekend": 120,
+      "sales": 119.32,
+      "weekend": 119.32,
       "links": "https://www.imdb.com/title/tt32558705/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BNjEzYTE2ODEtNzY5Zi00ZmVmLWEyYzEtYjdlZWU2NjcyYzMzXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, &middot;, Adventure, &middot;, Fantasy, &middot;, Sci-Fi, &middot;, Thriller"
@@ -19,7 +19,7 @@
       "rank": "2",
       "titles": "I Play Rocky",
       "sales": 10.42,
-      "weekend": 9.33,
+      "weekend": 9.32,
       "links": "https://www.imdb.com/title/tt11995650/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZTk4NjRhZjgtODAxYS00OTE3LWFhZjEtNmIyNzhhZDE0NTA3XkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Biography, &middot;, Comedy, &middot;, Drama, &middot;, Sport"
@@ -27,8 +27,8 @@
     {
       "rank": "3",
       "titles": "Ebenezer",
-      "sales": 32.55,
-      "weekend": 7.7,
+      "sales": 32.63,
+      "weekend": 7.79,
       "links": "https://www.imdb.com/title/tt38773219/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BY2Y0NWM2N2EtMjdkMS00NTc0LTg4NDctZmUyYTA4YWZlY2EwXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, &middot;, Comedy, &middot;, Drama, &middot;, Fantasy, &middot;, Thriller"
@@ -36,8 +36,8 @@
     {
       "rank": "4",
       "titles": "The Cat in the Hat",
-      "sales": 47.12,
-      "weekend": 6.85,
+      "sales": 46.97,
+      "weekend": 6.7,
       "links": "https://www.imdb.com/title/tt2321555/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BZmJhNzk4OGMtOTlmNC00ODAxLWFkYjYtY2RhYWVmNDg5YmViXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, &middot;, Animation, &middot;, Comedy, &middot;, Family, &middot;, Fantasy"
@@ -45,8 +45,8 @@
     {
       "rank": "5",
       "titles": "Godzilla Minus Zero",
-      "sales": 54.56,
-      "weekend": 2.7,
+      "sales": 54.7,
+      "weekend": 2.83,
       "links": "https://www.imdb.com/title/tt34384661/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BYzY2OWFhMTgtODJhMi00NDIyLWIzNTQtYjc4MjE4YTBjYzllXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, &middot;, Drama, &middot;, Horror, &middot;, Sci-Fi, &middot;, Thriller"
@@ -63,8 +63,8 @@
     {
       "rank": "7",
       "titles": "Wild Horse Nine",
-      "sales": 17.96,
-      "weekend": 2.5,
+      "sales": 17.93,
+      "weekend": 2.46,
       "links": "https://www.imdb.com/title/tt15799564/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BOTlkOGFlYWYtN2VlNC00NjNhLWIxYmMtNDVhZTQ4YmQ4ZTdiXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Action, &middot;, Comedy, &middot;, Crime, &middot;, Drama, &middot;, Thriller"
@@ -81,8 +81,8 @@
     {
       "rank": "9",
       "titles": "Ramayana: Rise of a Legend",
-      "sales": 28.41,
-      "weekend": 2.07,
+      "sales": 28.51,
+      "weekend": 2.16,
       "links": "https://www.imdb.com/find/?q=Ramayana%3A%20Rise%20of%20a%20Legend",
       "imageUrls": "",
       "genre": ""
@@ -90,8 +90,8 @@
     {
       "rank": "10",
       "titles": "Wildwood",
-      "sales": 52.02,
-      "weekend": 1.93,
+      "sales": 52.21,
+      "weekend": 2.11,
       "links": "https://www.imdb.com/title/tt2056785/",
       "imageUrls": "https://m.media-amazon.com/images/M/MV5BN2JjOGQ1OGMtZmUwYS00YmQ2LTllNzQtZjU2YjY1NzM2NzJjXkEyXkFqcGc@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "genre": "Adventure, &middot;, Animation, &middot;, Fantasy"
